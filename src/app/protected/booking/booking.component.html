@@ -1,0 +1,68 @@
+<div class="container vh-100 col-12">
+  <div class="row">
+    <!-- SIDEBAR -->
+    <div class="col-lg-2 col-md-2 col-xs-1" id="sidebar">
+      <app-sidebar></app-sidebar>
+    </div>
+
+    <!-- contenido página -->
+    <div class="col-lg-10 col-md-10 col-sm-11 col-xs-1">
+
+      <!-- titulo -->
+      <div class="col-lg-12 text-center" id="titulo">
+        <span>TITULO</span>
+      </div>
+
+      <form class="form" autocomplete="off" [formGroup]="formCalendario" (ngSubmit)="checkHours()">
+        <span>Seleccione un día </span>
+        <input type="date" name="fecha" type="date" formControlName="fecha">
+        <button class="login100-form-btn" type="submit" [disabled]="formCalendario.invalid">
+              Seleccionar
+        </button>
+      </form>
+
+      <!-- <div *ngIf="hours.length > 0">
+        <span>{{fecha}}</span>
+      </div> -->
+      <hr>
+
+      <!-- Comprobar que horas tiene una longitud >0 -->
+      <div *ngIf="hours.length > 0">
+        <!-- FORMULARIO -->
+        <form autocomplete="off" [formGroup]="formReserva" (ngSubmit)="reservar()">
+
+          <!-- Horas -->
+          <div>
+            <span>Seleccione horas disponibles</span>
+            <select formControlName="horas">
+              <option *ngFor="let hour of hours" [value]="hour">{{ hour }}</option>
+            </select>
+          </div>
+
+          <!-- Deporte -->
+          <div>
+            <span>Seleccione deporte</span>
+            <select formControlName="sport">
+              <option value="Futbol Sala">Fútbol Sala</option>
+              <option value="Baloncesto">Baloncesto</option>
+              <option value="Balonmano">Balonmano</option>
+              <option value="Badminton">Badminton</option>
+              <option value="Hockey">Hockey</option>
+              <option value="Patinaje">Patinaje</option>
+              <option value="Volleyball">Volleyball</option>
+            </select>
+          </div>
+
+          <!-- Submit -->
+          <div>
+            <button class="login100-form-btn" type="submit" [disabled]="formReserva.invalid">  <!-- con [disabled] que el boton no esté disponible si el formulario no es válido -->
+                Reservar
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
