@@ -15,8 +15,8 @@ export class LoginComponent {
   //  Hay que importar el ReactiveFormsModule en el auth.module.ts, dentro ponemos los campos que va a tener el formulario
   miFormulario: FormGroup = this.fb.group({
 
-    email: ['pgrillo@gmail.com', [Validators.required, Validators.email]],
-    password:['123456', [Validators.required, Validators.minLength(4)]]
+    email: ['', [Validators.required, Validators.email]],
+    password:['', [Validators.required, Validators.minLength(4)]]
 
     //  sintaxis--> campo: [valorXDefecto, [validador1, validador2]];
   });

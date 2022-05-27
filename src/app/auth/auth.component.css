@@ -1,0 +1,111 @@
+*{
+  text-decoration: none;
+}
+
+.contenedor-forumulario{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-2{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50%;
+}
+
+
+.titulo-pagina{
+  font-family: Cocogoose;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 6rem;
+  margin-top: 4rem;
+}
+
+.formulario-login{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+}
+
+.titulo-form{
+  text-align: center;
+  font-size: 3rem;
+  font-family: Cocogoose;
+  margin-top: 1rem;
+}
+
+.zona-email{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.zona-password{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputs-login{
+  outline: none;
+  text-align: center;
+  border-bottom: 1px solid black;
+  font-weight: bold;
+  margin-top: 3rem;
+}
+
+.zona-boton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boton-submit{
+  border-radius: 5px;
+  color: white;
+  border: 0.5px solid black;
+  font-size: large;
+  font-weight: bold;
+  background-color: black;
+}
+
+
+.zona-redireccion{
+  text-align: center;
+}
+
+
+.formulario-register{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+}
+
+.inputs-register{
+  outline: none;
+  text-align: center;
+  border-bottom: 1px solid black;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+.nombre-apellidos{
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
