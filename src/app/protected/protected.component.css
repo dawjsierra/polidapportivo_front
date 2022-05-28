@@ -10,6 +10,13 @@
   justify-content: center;
 }
 
+h1{
+  font-family: Cocogoose;
+  font-size: 6rem;
+  font-weight: bold;
+  color:#015BB7
+}
+
 /* TITULO DASHBOARD */
 
 .titulo-dashboard{
@@ -25,7 +32,6 @@
   height: 100%;
   margin-top: 3rem;
   border-radius: 10px;
-  background-color: #015BB7;
   display: flex;
   justify-content:space-around;
   flex-direction: column;
@@ -37,7 +43,7 @@
   flex-direction: column;
   font-family: Cocogoose;
   font-size: 2rem;
-  color: white;
+  color: black ;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -60,15 +66,41 @@
 }
 
 .info-somos{
-  grid-column: 1;
+  border: 2px solid #015BB7;
+  grid-column: 2;
+  grid-row: 1 / 5;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-foto{
+  overflow: hidden;
+  grid-column: 2;
   grid-row: 1 / 5;
   background-color: white;
   display: flex;
   flex-direction: column;
 }
 
+#foto1{
+  border-bottom: 1px solid #015BB7;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+#foto2{
+  border-bottom: 1px solid #015BB7;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 2px;
+}
+
+
 .titulo-somos{
-  color: black;
+  background-color: #015BB7;
+  color: white;
   font-family: Cocogoose;
   font-size: 2rem;
   display: flex;
@@ -88,7 +120,8 @@
 }
 
 .info-deportes{
-  grid-column: 2;
+  border: 2px solid #015BB7;
+  grid-column: 3;
   grid-row: 1 / 5;
   background-color: white;
   display: flex;
@@ -96,7 +129,8 @@
 }
 
 .titulo-deportes{
-  color: black;
+  background-color: #015BB7;
+  color: white;
   font-family: Cocogoose;
   font-size: 3rem;
   display: flex;
@@ -129,8 +163,10 @@
 }
 
 
-.info-horarios-ubicacion{
-  grid-column: 3;
+
+.info-instalaciones{
+  border: 2px solid #015BB7;
+  grid-column: 1;
   grid-row: 1 / 5;
   background-color: white;
   display: flex;
@@ -138,7 +174,7 @@
 }
 
 
-.texto-horarios-ubicacion{
+.texto-instalaciones{
   display: flex;
   justify-content: space-around;
   align-items: center;
