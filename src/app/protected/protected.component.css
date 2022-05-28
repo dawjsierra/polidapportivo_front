@@ -53,14 +53,104 @@
 }
 
 .contenedor-info{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 6rem;
+  grid-auto-rows: minmax(10px, auto);
+}
+
+.info-somos{
+  grid-column: 1;
+  grid-row: 1 / 5;
+  background-color: white;
   display: flex;
   flex-direction: column;
+}
+
+.titulo-somos{
+  color: black;
   font-family: Cocogoose;
   font-size: 2rem;
-  color: white;
-  text-align: center;
-  margin-bottom: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.texto-somos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 75%;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 18px;
+}
+
+.info-deportes{
+  grid-column: 2;
+  grid-row: 1 / 5;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo-deportes{
+  color: black;
+  font-family: Cocogoose;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.texto-deportes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 75%;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 18px;
+}
+
+.bloque-deportes{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.lista-deportes>li{
+  list-style: none;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+
+.info-horarios-ubicacion{
+  grid-column: 3;
+  grid-row: 1 / 5;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.texto-horarios-ubicacion{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 18px;
+  height: 75%;
+}
+
 
 /* FIN SECTION */
 
@@ -86,7 +176,6 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   text-align: center;
 }
 
@@ -100,7 +189,8 @@
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+  margin-top: 5%;
 }
 
 .footer-contacto{
