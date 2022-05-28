@@ -1,12 +1,39 @@
-<div class="container rounded h-100 col-12">
+<div class="container-fluid bg-light vh-100 col-12 overflow-hidden">
   <div class="row py-3 h-100">
-      <div class="col-3 order-2 bgblack h-100" id="sticky-sidebar">
-          <div class="sticky-top">
-              <app-sidebar></app-sidebar>
+    <!-- SIDEBAR -->
+    <div class="col-lg-2 col-md-2 col-xs-1" id="sidebar">
+      <app-sidebar></app-sidebar>
+    </div>
+    <!-- CONTENIDO -->
+    <div class="contenido col-10" id="main">
+
+      <!-- Titulo -->
+      <div class="contenedor-titulo">
+        <div class="titulo-dashboard">POLIDAPPORTIVO</div>
+      </div>
+
+      <!-- Contenido -->
+      <div class="contenedor-cuerpo">
+
+        <!-- Fila mensaje de bienvenida -->
+        <div class="row cont-bienvenida">
+          <div class="col-12 rounded bienvenida h-25 w-75">
+            <div>¡NOS ENCANTA VERTE POR AQUÍ!</div>
           </div>
+        </div>
+
+        <div class="row cont-info">
+          <div class="col-12 rounded contenedor-info bg-danger h-100">
+            <div class="h-100">HOLA</div>
+          </div>
+        </div>
       </div>
-      <div class="col" id="main">
-          <h1>DASHBOARD</h1>
+
+
+
+      <div class="contenedor-footer">
+        <app-footer></app-footer>
       </div>
+    </div>
   </div>
 </div>

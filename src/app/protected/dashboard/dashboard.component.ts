@@ -6,7 +6,7 @@ import { Usuario } from '../../auth/interfaces/interfaces';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styles: []
+  styleUrls: ['./../protected.component.css']
 })
 export class DashboardComponent implements OnInit{
 
