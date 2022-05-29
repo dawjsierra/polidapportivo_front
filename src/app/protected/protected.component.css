@@ -17,176 +17,231 @@ h1{
   color:#015BB7
 }
 
-/* TITULO DASHBOARD */
 
-.titulo-dashboard{
+/* ////////////////////////////////////////////////////// */
+/* DASHBOARD */
+/* ////////////////////////////////////////////////////// */
+
+  /* TITULO DASHBOARD */
+
+  .titulo-dashboard{
+    text-align: center;
+    font-size: 5rem;
+    font-family: Cocogoose;
+    color: #015BB7;
+  }
+
+  /* SECTION */
+
+  .contenedor-cuerpo{
+    height: 100%;
+    margin-top: 3rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content:space-around;
+    flex-direction: column;
+  }
+
+
+  .bienvenida{
+    display: flex;
+    flex-direction: column;
+    font-family: Cocogoose;
+    font-size: 2rem;
+    color: black ;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cont-info{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contenedor-info{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 6rem;
+    grid-auto-rows: minmax(10px, auto);
+  }
+
+  .info-somos{
+    border: 2px solid #015BB7;
+    grid-column: 2;
+    grid-row: 1 / 5;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .info-foto{
+    overflow: hidden;
+    grid-column: 2;
+    grid-row: 1 / 5;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #foto1{
+    border-bottom: 1px solid #015BB7;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+  }
+
+  #foto2{
+    border-bottom: 1px solid #015BB7;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 2px;
+  }
+
+
+  .titulo-somos{
+    background-color: #015BB7;
+    color: white;
+    font-family: Cocogoose;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .texto-somos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 75%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 18px;
+  }
+
+  .info-deportes{
+    border: 2px solid #015BB7;
+    grid-column: 3;
+    grid-row: 1 / 5;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .titulo-deportes{
+    background-color: #015BB7;
+    color: white;
+    font-family: Cocogoose;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .texto-deportes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 75%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 18px;
+  }
+
+  .bloque-deportes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+
+  .lista-deportes>li{
+    list-style: none;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+
+  .info-instalaciones{
+    border: 2px solid #015BB7;
+    grid-column: 1;
+    grid-row: 1 / 5;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .texto-instalaciones{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 18px;
+    height: 75%;
+  }
+
+  /* FIN SECTION */
+
+
+
+
+
+/* ////////////////////////////////////////////////////// */
+/* MI PERFL (USER) */
+/* ////////////////////////////////////////////////////// */
+
+.contenedor-mis-datos{
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.mis-datos-div{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 3rem;
+    grid-auto-rows: minmax(10px, auto);
+}
+
+.mis-datos-bloques{
   text-align: center;
-  font-size: 5rem;
-  font-family: Cocogoose;
-  color: #015BB7;
-}
-
-/* SECTION */
-
-.contenedor-cuerpo{
-  height: 100%;
-  margin-top: 3rem;
-  border-radius: 10px;
-  display: flex;
-  justify-content:space-around;
-  flex-direction: column;
-}
-
-
-.bienvenida{
-  display: flex;
-  flex-direction: column;
-  font-family: Cocogoose;
-  font-size: 2rem;
-  color: black ;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.cont-info{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  height: 80%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.contenedor-info{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 6rem;
-  grid-auto-rows: minmax(10px, auto);
-}
-
-.info-somos{
   border: 2px solid #015BB7;
-  grid-column: 2;
-  grid-row: 1 / 5;
+
   background-color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.info-foto{
-  overflow: hidden;
-  grid-column: 2;
-  grid-row: 1 / 5;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-}
-
-#foto1{
-  border-bottom: 1px solid #015BB7;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
-}
-
-#foto2{
-  border-bottom: 1px solid #015BB7;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 2px;
-}
-
-
-.titulo-somos{
-  background-color: #015BB7;
-  color: white;
-  font-family: Cocogoose;
-  font-size: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.texto-somos{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 75%;
-  margin-left: 5%;
-  margin-right: 5%;
-  font-size: 18px;
-}
-
-.info-deportes{
-  border: 2px solid #015BB7;
-  grid-column: 3;
-  grid-row: 1 / 5;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-}
-
-.titulo-deportes{
-  background-color: #015BB7;
-  color: white;
-  font-family: Cocogoose;
-  font-size: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.texto-deportes{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 75%;
-  margin-left: 5%;
-  margin-right: 5%;
-  font-size: 18px;
-}
-
-.bloque-deportes{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-}
-
-.lista-deportes>li{
-  list-style: none;
-  margin-bottom: 1rem;
-  font-size: 1.4rem;
-}
-
-
-
-.info-instalaciones{
-  border: 2px solid #015BB7;
-  grid-column: 1;
-  grid-row: 1 / 5;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-}
-
-
-.texto-instalaciones{
-  display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-direction: column;
-  margin-left: 5%;
-  margin-right: 5%;
-  font-size: 18px;
-  height: 75%;
+}
+
+.mis-datos-bloques>input{
+  border-bottom: 1px solid black;
+  outline: none;
+}
+
+.mis-datos-email{
+  grid-column: 1;
+  grid-row: 1 / 2;
+}
+
+.mis-datos-nombre{
+  grid-column: 2;
+  grid-row: 1 / 2;
 }
 
 
-/* FIN SECTION */
+
+
+
 
 /* FOOTER */
 .contenedor-footer{
