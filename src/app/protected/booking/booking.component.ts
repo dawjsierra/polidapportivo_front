@@ -7,7 +7,7 @@ import { BookingService } from '../services/booking.service';
 @Component({
   selector: 'app-booking',
   templateUrl: './booking.component.html',
-  styleUrls: ['./booking.component.css']
+  styleUrls: ['../protected.component.css'],
 })
 export class BookingComponent implements OnInit {
 

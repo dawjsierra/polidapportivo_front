@@ -1,5 +1,5 @@
-<div class="container vh-100 col-12">
-  <div class="row">
+<div class="container-fluid bg-light vh-100 col-12 overflow-hidden">
+  <div class="row py-3 h-100">
     <!-- SIDEBAR -->
     <div class="col-lg-2 col-md-2 col-xs-1" id="sidebar">
       <app-sidebar></app-sidebar>
@@ -20,13 +20,7 @@
               Seleccionar
         </button>
       </form>
-
-      <!-- <div *ngIf="hours.length > 0">
-        <span>{{fecha}}</span>
-      </div> -->
       <hr>
-
-      <!-- Comprobar que horas tiene una longitud >0 -->
       <div *ngIf="hours.length > 0">
         <!-- FORMULARIO -->
         <form autocomplete="off" [formGroup]="formReserva" (ngSubmit)="reservar()">

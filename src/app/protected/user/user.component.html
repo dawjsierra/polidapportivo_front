@@ -5,39 +5,58 @@
       <app-sidebar></app-sidebar>
     </div>
 
-    <div class="contenido col-10" id="main">
+    <div class="contenido-user col-10" id="main">
       <div class="contenedor-titulo" id="titulo">
         <h1>POLIDAPPORTIVO</h1>
       </div>
 
-      <div class="contenedor-mis-datos bg-danger">
-        <div class="mis-datos-titulo text-center h-25">MIS DATOS</div>
-        <div class="mis-datos-div h-50">
-          <div class="mis-datos-email mis-datos-bloques text-center">
-            <div class="email-titulo">CORREO ELECTRÓNICO</div>
-            <input class="inputs-login form-control-plaintext w-75" type="email" placeholder="{{email}}">
+      <div class="contenedor-datos-reservas h-50">
+        <div class="mis-datos-titulo text-center">MIS DATOS</div>
+        <div class="text-center font-size">En caso de que quiera actualizar sus datos, rellene todos los campos y seleccione "Actualizar"</div>
+        <div class="mis-datos-div h-25">
+          <div class="mis-datos-bloques rounded">
+            <div class="titulos-datos">CORREO ELECTRÓNICO</div>
+            <input class="form-control-plaintext w-75 text-white" type="email" placeholder="{{email}}">
           </div>
-          <div class="mis-datos-nombre mis-datos-bloques">
-            <div class="nombre-titulo">NOMBRE</div>
-            <input class="inputs-login form-control-plaintext w-75" type="email" placeholder="{{name}}">
+          <div class="mis-datos-bloques rounded">
+            <div class="titulos-datos">NOMBRE</div>
+            <input class="form-control-plaintext w-75 text-white" type="text" placeholder="{{name}}">
           </div>
-          <div class="mis-datos-apellidos mis-datos-bloques">
-            <div class="apellidos-titulo">APELLIDOS</div>
-            <input class="inputs-login form-control-plaintext w-75" type="email" placeholder="{{surname}}">
-          </div>
-          <!-- TODO: -->
-          <div class="mis-datos-contraseña mis-datos-bloques">
-            <div class="apellidos-titulo">CONTRASEÑA</div>
-            <div class="apellidos-texto">Por implementar</div>
+          <div class="mis-datos-bloques rounded">
+            <div class="titulos-datos">APELLIDOS</div>
+            <input class="form-control-plaintext w-75 text-white" type="text" placeholder="{{surname}}">
           </div>
           <!-- TODO: -->
-          <div class="mis-datos-submit mis-datos-bloques">
-            <div class="submit-titulo">BOTON</div>
-            <div class="submit-texto">Por implementar</div>
+          <div class="mis-datos-bloques rounded">
+            <div class="titulos-datos">CONTRASEÑA</div>
+            <input class="form-control-plaintext w-75 text-white" type="password" placeholder="Nueva contraseña">
+          </div>
+          <!-- TODO: -->
+          <div class="mis-datos-submit rounded">
+            <input type="submit" value="Actualizar" class="btn-group boton-actualizar">
+          </div>
+        </div>
+
+
+
+        <div class="mis-reservas-div h-50">
+          <div class="mis-datos-titulo text-center h-25">MIS ÚLTIMAS RESERVAS</div>
+          <div class="reservas ">
+            <div *ngFor="let reserva of arrReservas" class="cont-reservas h-100 rounded">
+              <div class="reserva-info text-center"><div class="titulo-reservas">ID RESERVA {{ reserva.id }}</div></div>
+              <div class="reserva-info text-center">{{ reserva.date | date: 'mediumDate' }} a las {{ reserva.hour}}</div>
+              <div class="reserva-info text-center">{{ reserva.sport | uppercase}}</div>
+              <div class="borrar-reservas">
+                <input value="Eliminar" type="submit" class="boton-borrar rounded">
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
+      <div class="contenedor-footer">
+        <app-footer></app-footer>
+      </div>
     </div>
 
     <!-- <div class="col-lg-10 col-md-10 col-sm-11 col-xs-1">

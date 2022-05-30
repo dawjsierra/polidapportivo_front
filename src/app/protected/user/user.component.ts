@@ -1,8 +1,7 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SidebarComponent } from '../shared/sidebar/sidebar.component';
 import { BookingService } from '../services/booking.service';
 import { Booking } from '../interfaces/interfaces';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-user',
@@ -13,6 +12,7 @@ import { Subscription } from 'rxjs';
 export class UserComponent implements OnInit {
 
   arrReservas: Booking[] = [];
+  arrReservas2: Booking[] = this.arrReservas.splice(this.arrReservas.length-5);
 
   constructor(private bookingService: BookingService) {}
 
