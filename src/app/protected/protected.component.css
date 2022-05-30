@@ -188,7 +188,6 @@ h1{
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  border: 2px solid #015BB7;
   border-radius: 6px;
 }
 
@@ -197,7 +196,7 @@ h1{
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 3rem;
     grid-auto-rows: minmax(10px, auto);
-    width: 95%;
+    width: 98%;
 }
 
 .mis-datos-bloques{
@@ -236,7 +235,7 @@ h1{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 90%;
+  width: 98%;
 }
 
 .mis-datos-titulo{
@@ -293,6 +292,96 @@ h1{
   font-weight: bold;
   color: white;
 }
+
+
+
+/* RESERVAS */
+
+
+.contenedor-datos-reservas2{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #015BB7;
+}
+
+.contenido-bookings{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contenedor-fecha{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+}
+
+.form-fecha{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.texto-fecha{
+  color: white;
+  font-family: Cocogoose;
+  font-size: 1.5rem;
+}
+
+.calendario{
+  width: 25%;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.boton-fecha{
+  margin-bottom: 1rem;
+}
+
+.formulario-horas-sport{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contenedor-datos{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.horas-deporte{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.horas:last-child{
+  width: 100%;
+}
+
+
+.boton-reservar{
+}
+
+
+
+
+
+
+
+
 /* FOOTER */
 .contenedor-footer{
   margin-top: 1rem;

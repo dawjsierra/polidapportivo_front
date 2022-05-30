@@ -5,10 +5,66 @@
       <app-sidebar></app-sidebar>
     </div>
 
-    <!-- contenido página -->
-    <div class="col-lg-10 col-md-10 col-sm-11 col-xs-1">
+    <div class="contenido-bookings col-10">
 
-      <!-- titulo -->
+      <div class="contenedor-titulo" id="titulo">
+        <h1>POLIDAPPORTIVO</h1>
+      </div>
+
+      <div class="contenedor-datos-reservas2 h-50 w-100 ">
+        <form class="form w-100 h-75 form-fecha rounded" autocomplete="off" [formGroup]="formCalendario" (ngSubmit)="checkHours()">
+
+          <!-- CONTENEDOR SELECCION FECHA -->
+          <div class="contenedor-fecha h-50 w-50">
+            <div class="texto-fecha text-center">SELECCIONE UN DÍA</div>
+            <input class="calendario" type="date" name="fecha" type="date" formControlName="fecha">
+            <button class="boton-fecha" type="submit" [disabled]="formCalendario.invalid">Seleccionar</button>
+          </div>
+
+          <div class="contenedor-hora-sport h-50 w-100">
+            <!-- *ngIf="hours.length > 0" -->
+            <div *ngIf="hours.length > 0">
+              <form autocomplete="off" [formGroup]="formReserva" (ngSubmit)="reservar()" class="formulario-horas-sport">
+
+                <div class="contenedor-datos w-75">
+                  <div class="horas-deporte w-50">
+                    <span class="texto-fecha">SELECCIONA UNA HORA</span><hr>
+                    <select formControlName="horas">
+                      <option *ngFor="let hour of hours" [value]="hour">{{ hour }}</option>
+                    </select>
+                  </div>
+                  <div class="horas-deporte w-50">
+                    <span class="texto-fecha">SELECCIONA EL DEPORTE A PRACTICAR</span><hr>
+                    <select formControlName="sport">
+                      <option value="Futbol Sala">Fútbol Sala</option>
+                      <option value="Baloncesto">Baloncesto</option>
+                      <option value="Balonmano">Balonmano</option>
+                      <option value="Badminton">Badminton</option>
+                      <option value="Hockey">Hockey</option>
+                      <option value="Patinaje">Patinaje</option>
+                      <option value="Volleyball">Volleyball</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="contenedor-boton">
+                  <button class="boton-reservar mt-4" type="submit" [disabled]="formReserva.invalid">
+                      Reservar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="contenedor-footer">
+        <app-footer></app-footer>
+      </div>
+
+    </div>
+
+    <!-- <div class="col-lg-10 col-md-10 col-sm-11 col-xs-1">
+
       <div class="col-lg-12 text-center" id="titulo">
         <span>TITULO</span>
       </div>
@@ -22,10 +78,8 @@
       </form>
       <hr>
       <div *ngIf="hours.length > 0">
-        <!-- FORMULARIO -->
         <form autocomplete="off" [formGroup]="formReserva" (ngSubmit)="reservar()">
 
-          <!-- Horas -->
           <div>
             <span>Seleccione horas disponibles</span>
             <select formControlName="horas">
@@ -33,7 +87,6 @@
             </select>
           </div>
 
-          <!-- Deporte -->
           <div>
             <span>Seleccione deporte</span>
             <select formControlName="sport">
@@ -47,16 +100,15 @@
             </select>
           </div>
 
-          <!-- Submit -->
           <div>
-            <button class="login100-form-btn" type="submit" [disabled]="formReserva.invalid">  <!-- con [disabled] que el boton no esté disponible si el formulario no es válido -->
+            <button class="login100-form-btn" type="submit" [disabled]="formReserva.invalid">
                 Reservar
             </button>
           </div>
         </form>
       </div>
 
-    </div>
+    </div> -->
   </div>
 </div>
 
