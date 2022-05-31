@@ -35,7 +35,7 @@ export class SidebarComponent implements OnInit {
     localStorage.removeItem('role');
     localStorage.removeItem('reservas');
     localStorage.removeItem('checkBookings');
-    this.router.navigateByUrl('/auth')
+    this.router.navigateByUrl('/auth');
   }
 
 }

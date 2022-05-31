@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { of, Observable, Subject } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { environment } from '../../../environments/environment.prod';
-import { BookingsUserResponse, Booking, DateAvailableResponse, CrearReservaResponse, ReservaInterface } from '../interfaces/interfaces';
+import { BookingsUserResponse, Booking, DateAvailableResponse, CrearReservaResponse, ReservaInterface, UpdateUser } from '../interfaces/interfaces';
 import { Router } from '@angular/router';
 
 
@@ -67,5 +67,14 @@ export class BookingService {
     const headers = new HttpHeaders({'Authorization':"mi-token-secreto"});
 
 	  return this.http.post<CrearReservaResponse>(url, body, {headers});
+  }
+
+
+  updateUser(id: number, name: string, surname: string, email: string, password: string, role: number ){
+    const url = `${this.baseURL}/users/${id}`;
+    const body = {id, name, surname, email, password, role};
+    const headers = new HttpHeaders({'Authorization':"mi-token-secreto"});
+
+    return this.http.put<UpdateUser>(url, body, {headers});
   }
 }

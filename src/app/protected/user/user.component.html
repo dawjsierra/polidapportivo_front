@@ -13,29 +13,33 @@
       <div class="contenedor-datos-reservas h-50">
         <div class="mis-datos-titulo text-center">MIS DATOS</div>
         <div class="text-center font-size">En caso de que quiera actualizar sus datos, rellene todos los campos y seleccione "Actualizar"</div>
-        <div class="mis-datos-div h-25">
+
+        <form class="mis-datos-div h-25 form" [formGroup]="formUpdate" (ngSubmit)="updateUser()" autocomplete="off">
+          <!-- email -->
           <div class="mis-datos-bloques rounded">
             <div class="titulos-datos">CORREO ELECTRÓNICO</div>
-            <input class="form-control-plaintext w-75 text-white" type="email" placeholder="{{email}}">
+            <input class="form-control-plaintext w-75 text-white" type="email" formControlName="email" placeholder="{{email}}">
           </div>
+          <!-- nombre -->
           <div class="mis-datos-bloques rounded">
             <div class="titulos-datos">NOMBRE</div>
-            <input class="form-control-plaintext w-75 text-white" type="text" placeholder="{{name}}">
+            <input class="form-control-plaintext w-75 text-white" type="text" formControlName="name" placeholder="{{name}}">
           </div>
+          <!-- apellidos -->
           <div class="mis-datos-bloques rounded">
             <div class="titulos-datos">APELLIDOS</div>
-            <input class="form-control-plaintext w-75 text-white" type="text" placeholder="{{surname}}">
+            <input class="form-control-plaintext w-75 text-white" type="text" formControlName="surname" placeholder="{{surname}}">
           </div>
-          <!-- TODO: -->
+          <!-- password -->
           <div class="mis-datos-bloques rounded">
             <div class="titulos-datos">CONTRASEÑA</div>
-            <input class="form-control-plaintext w-75 text-white" type="password" placeholder="Nueva contraseña">
+            <input class="form-control-plaintext w-75 text-white" type="password" formControlName="password" placeholder="Nueva contraseña">
           </div>
-          <!-- TODO: -->
+          <!-- enviar -->
           <div class="mis-datos-submit rounded">
-            <input type="submit" value="Actualizar" class="btn-group boton-actualizar">
+            <button type="submit" value="Actualizar" class="btn-group boton-actualizar" [disabled]="formUpdate.invalid">ACTUALIZAR</button>
           </div>
-        </div>
+        </form>
 
 
 

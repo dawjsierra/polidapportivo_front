@@ -40,3 +40,15 @@ export interface ReservaInterface{
   sport: string,
   id_user: number
 }
+
+export interface UpdateUser{
+  id: number,
+  name: string,
+  surname: string,
+  email: string,
+  password: string,
+  role: number,
+  created_at: string,
+  updated_at: string,
+  remember_token: null;
+}
