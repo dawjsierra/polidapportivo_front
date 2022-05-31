@@ -22,8 +22,8 @@
           </div>
 
           <div class="contenedor-hora-sport h-50 w-100">
-            <!-- *ngIf="hours.length > 0" -->
-            <div>
+            <!-- " -->
+            <div *ngIf="hours.length > 0">
               <form autocomplete="off" [formGroup]="formReserva" (ngSubmit)="reservar()" class="formulario-horas-sport">
 
                 <div class="contenedor-datos w-75">

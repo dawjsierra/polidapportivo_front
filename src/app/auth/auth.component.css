@@ -18,6 +18,22 @@
   margin-bottom: 50%;
 }
 
+.contenedor-titulo2{
+  height: 19%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+h1{
+  font-family: Cocogoose;
+  font-size: 6rem;
+  font-weight: bold;
+  color:white;
+}
+
 
 .titulo-pagina{
   font-family: Cocogoose;

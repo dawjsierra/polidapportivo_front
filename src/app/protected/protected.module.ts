@@ -31,7 +31,8 @@ import { HeaderComponent } from './shared/header/header.component';
     ImagesComponent,
     BookingComponent,
     UserComponent,
-    SidebarComponent
+    SidebarComponent,
+    HeaderComponent
   ]
 })
 export class ProtectedModule { }
