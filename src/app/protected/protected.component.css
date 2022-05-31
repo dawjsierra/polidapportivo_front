@@ -194,11 +194,11 @@ h1{
   }
 
   .mis-datos-div{
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      grid-gap: 3rem;
-      grid-auto-rows: minmax(10px, auto);
-      width: 98%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 3rem;
+    grid-auto-rows: minmax(10px, auto);
+    width: 98%;
   }
 
   .mis-datos-bloques{
@@ -395,8 +395,45 @@ h1{
 /* ////////////////////////////////////////////////////// */
 
 
+.contenedor-imagenes{
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: minmax(1px, auto);
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
 
+.contenedor-imagenes>img{
+  -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
 
+#imagen01, #imagen02, #imagen03, #imagen04, #imagen05, #imagen06, #imagen07, #imagen08, #imagen09, #imagen10{
+  border: 1px solid #015BB7;
+  border-radius: 6px;
+  -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+#imagen01:hover, #imagen02:hover, #imagen03:hover, #imagen04:hover, #imagen05:hover, #imagen06:hover, #imagen07:hover, #imagen08:hover, #imagen09:hover, #imagen10:hover{
+  -webkit-transform: scale(1.3);
+	transform: scale(1.3);
+  border-radius: 6px;
+}
+
+.mensaje-imagenes{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
 
 
 
@@ -433,7 +470,7 @@ h1{
   }
 
   .footer-social-titulo{
-    color: #C00000;
+    color: #015BB7;
     font-weight: bold;
   }
 
