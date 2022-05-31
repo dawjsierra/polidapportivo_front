@@ -9,7 +9,7 @@ import { UserComponent } from './user/user.component';
 import { BookingComponent } from './booking/booking.component';
 import { ImagesComponent } from './images/images.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { HeaderComponent } from './shared/header/header.component';
 
 
 @NgModule({
@@ -19,7 +19,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     UserComponent,
     BookingComponent,
-    ImagesComponent
+    ImagesComponent,
+    HeaderComponent
   ],
   imports: [
     CommonModule,

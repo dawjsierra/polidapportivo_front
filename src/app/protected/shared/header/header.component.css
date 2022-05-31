@@ -1,0 +1,18 @@
+.titulo-cabecera{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.foto-pelota{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1{
+  font-family: Cocogoose;
+  font-size: 6rem;
+  font-weight: bold;
+  color:#015BB7
+}

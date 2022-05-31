@@ -8,22 +8,22 @@
     <div class="contenido-bookings col-10">
 
       <div class="contenedor-titulo" id="titulo">
-        <h1>POLIDAPPORTIVO</h1>
+        <app-header></app-header>
       </div>
 
-      <div class="contenedor-datos-reservas2 h-50 w-100 ">
+      <div class="contenedor-datos-reservas2 h-50 w-100 rounded ">
         <form class="form w-100 h-75 form-fecha rounded" autocomplete="off" [formGroup]="formCalendario" (ngSubmit)="checkHours()">
 
           <!-- CONTENEDOR SELECCION FECHA -->
           <div class="contenedor-fecha h-50 w-50">
             <div class="texto-fecha text-center">SELECCIONE UN DÍA</div>
             <input class="calendario" type="date" name="fecha" type="date" formControlName="fecha">
-            <button class="boton-fecha" type="submit" [disabled]="formCalendario.invalid">Seleccionar</button>
+            <button class="botones-reservas btn-close-white rounded" type="submit" [disabled]="formCalendario.invalid">SELECCIONAR</button>
           </div>
 
           <div class="contenedor-hora-sport h-50 w-100">
             <!-- *ngIf="hours.length > 0" -->
-            <div *ngIf="hours.length > 0">
+            <div>
               <form autocomplete="off" [formGroup]="formReserva" (ngSubmit)="reservar()" class="formulario-horas-sport">
 
                 <div class="contenedor-datos w-75">
@@ -47,8 +47,8 @@
                   </div>
                 </div>
                 <div class="contenedor-boton">
-                  <button class="boton-reservar mt-4" type="submit" [disabled]="formReserva.invalid">
-                      Reservar
+                  <button class="botones-reservas mt-4 rounded btn-close-white" type="submit" [disabled]="formReserva.invalid">
+                      RESERVAR
                   </button>
                 </div>
               </form>
