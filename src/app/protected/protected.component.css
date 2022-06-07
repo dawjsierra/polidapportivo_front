@@ -1,3 +1,11 @@
+/* DASHBOARD */
+
+.contenedor-principal{
+  width: 100%;
+  display: flex;
+  flex: row;
+}
+
 .contenido{
   display: flex;
   flex-direction: column;
@@ -6,168 +14,127 @@
 
 .contenedor-titulo{
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-h1{
-  font-family: Cocogoose;
-  font-size: 6rem;
-  font-weight: bold;
-  color:#015BB7
+.contenedor-cuerpo{
+  height: 100%;
+  margin-top: 3rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }
 
 
-/* ////////////////////////////////////////////////////// */
-/* DASHBOARD */
-/* ////////////////////////////////////////////////////// */
+.cont-info{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  /* TITULO DASHBOARD */
+.contenedor-info{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 6rem;
+  grid-auto-rows: minmax(10px, auto);
+}
 
-  .titulo-dashboard{
-    text-align: center;
-    font-size: 5rem;
-    font-family: Cocogoose;
-    color: #015BB7;
-  }
+.info-somos{
+  border: 2px solid black;
+  grid-column: 2;
+  grid-row: 1 / 5;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  /* SECTION */
+.info-foto{
+  overflow: hidden;
+  grid-column: 2;
+  grid-row: 1 / 5;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
 
-  .contenedor-cuerpo{
-    height: 100%;
-    margin-top: 3rem;
-    border-radius: 10px;
-    display: flex;
-    justify-content:space-around;
-    flex-direction: column;
-  }
+#foto1{
+  border-bottom: 1px solid black;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
 
+#foto2{
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 2px;
+}
 
-  .bienvenida{
-    display: flex;
-    flex-direction: column;
-    font-family: Cocogoose;
-    font-size: 2rem;
-    color: black ;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.info-deportes{
+  border: 2px solid black;
+  grid-column: 3;
+  grid-row: 1/5;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+}
 
-  .cont-info{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    height: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.titulo-deportes{
+  background-color: black;
+  color: white;
+  font-family: Cocogoose;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .contenedor-info{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 6rem;
-    grid-auto-rows: minmax(10px, auto);
-  }
+.texto-deportes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 75%;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 18px;
+}
 
-  .info-somos{
-    border: 2px solid #015BB7;
-    grid-column: 2;
-    grid-row: 1 / 5;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .info-foto{
-    overflow: hidden;
-    grid-column: 2;
-    grid-row: 1 / 5;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-  }
-
-  #foto1{
-    border-bottom: 1px solid #015BB7;
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
-  }
-
-  #foto2{
-    border-bottom: 1px solid #015BB7;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 2px;
-  }
-
-  .info-deportes{
-    border: 2px solid #015BB7;
-    grid-column: 3;
-    grid-row: 1 / 5;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .titulo-deportes{
-    background-color: #015BB7;
-    color: white;
-    font-family: Cocogoose;
-    font-size: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .texto-deportes{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 75%;
-    margin-left: 5%;
-    margin-right: 5%;
-    font-size: 18px;
-  }
-
-  .bloque-deportes{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
-  }
-
-  .lista-deportes>li{
-    list-style: none;
-    margin-bottom: 1rem;
-    font-size: 1.4rem;
-  }
-
-  .info-instalaciones{
-    border: 2px solid #015BB7;
-    grid-column: 1;
-    grid-row: 1 / 5;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-  }
+.lista-deportes>li{
+  list-style: none;
+  margin-bottom: 1rem;
+}
 
 
-  .texto-instalaciones{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    margin-left: 5%;
-    margin-right: 5%;
-    font-size: 18px;
-    height: 75%;
-  }
+.info-instalaciones{
+  border: 2px solid black;
+  grid-column: 1;
+  grid-row: 1/5;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
 
-  /* FIN SECTION */
+.texto-instalaciones{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 18px;
+  height: 75%;
+}
+
+
+
 
 
 
@@ -177,122 +144,134 @@ h1{
 /* MI PERFL (USER) */
 /* ////////////////////////////////////////////////////// */
 
-  .contenido-user{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+.contenido-user{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-  .contenedor-datos-reservas{
-    height: 25%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    border-radius: 6px;
-  }
+.contenedor-datos-reservas{
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 6px;
+  background-color: white;
+}
 
-  .mis-datos-div{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 3rem;
-    grid-auto-rows: minmax(10px, auto);
-    width: 98%;
-  }
+.mis-datos-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 2%;
+}
 
-  .mis-datos-bloques{
-    text-align: center;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    margin-bottom: 0.5rem;
-    border: 2px solid black;
-  }
+.inputs-update{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  grid-auto-rows: minmax(10px, auto);
+  width: 98%;
+}
 
-  .mis-datos-bloques>input{
-    border-bottom: 1px solid black;
-    outline: none;
-    text-align: center;
-  }
+.mis-datos-bloques{
+  text-align: center;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 0.5rem;
+  border: 2px solid black;
+}
 
-  .mis-datos-submit{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
+.mis-datos-bloques>input{
+  border-bottom: 1px solid black;
+  outline: none;
+  text-align: center;
+}
 
-  .inputs-login{
-    outline: none;
-    text-align: center;
-    border-bottom: 1px solid black;
-    font-weight: bold;
-    margin-top: 3rem;
-  }
+.mis-datos-submit{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
 
-  .mis-reservas-div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 98%;
-  }
+.inputs-login{
+  outline: none;
+  text-align: center;
+  border-bottom: 1px solid black;
+  font-weight: bold;
+  margin-top: 3rem;
+}
 
-  .mis-datos-titulo{
-    font-family: Cocogoose;
-    font-size: 1.5rem;
-  }
+.mis-reservas-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 98%;
+}
 
-  .titulos-datos{
-    font-weight: bold;
-    color: white;
-    background-color: #015BB7;
-    width: 90%;
-  }
+.mis-datos-titulo{
+  font-family: Cocogoose;
+  font-size: 1.5rem;
+}
 
-  .reservas{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 3rem;
-    grid-auto-rows: minmax(10px, auto);
-  }
+.titulos-datos{
+  font-weight: bold;
+  color: white;
+  background-color: #015BB7;
+  width: 100%;
+}
 
-  .cont-reservas{
-    background-color: #015BB7;
-    border: 1px solid white;
-  }
+.reservas{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1rem;
+  grid-auto-rows: minmax(5px, auto);
+}
 
-  .id-reserva{
-    text-align: center;
-  }
+.cont-reservas{
+  background-color: #015BB7;
+  border: 1px solid black;
+}
 
-  .reserva-info{
-    margin: 0.5rem;
-    color: white;
-  }
+.id-reserva{
+  text-align: center;
+}
 
-  .titulo-reservas{
-    background-color: white;
-    color: black;
-    font-weight: bold;
-  }
+.reserva-info{
+  margin: 0.5rem;
+  color: white;
+}
 
-  .borrar-reservas{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
-  }
+.titulo-reservas{
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
 
-  .boton-borrar{
-    text-align: center;
-    display: flex;
-    align-items: center;
-    font-size: 0.9rem;
-    background-color: black;
-    font-weight: bold;
-    color: white;
-  }
+.borrar-reservas{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.boton-borrar{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  background-color: black;
+  font-weight: bold;
+  color: white;
+}
 
 
 /* FIN USER */
@@ -305,86 +284,99 @@ h1{
 /* ////////////////////////////////////////////////////// */
 
 
-  .contenedor-datos-reservas2{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    background-color: #015BB7;
-  }
+.contenedor-datos-reservas2{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+}
 
-  .contenido-bookings{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+.contenido-bookings{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-  .contenedor-fecha{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-bottom: 1px solid black;
-  }
+.contenedor-fecha{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+}
 
-  .form-fecha{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
+.form-fecha{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
-  .texto-fecha{
-    color: white;
-    font-family: Cocogoose;
-    font-size: 1.5rem;
-  }
+.texto-fecha{
+  color: black;
+  font-family: Cocogoose;
+  font-size: 1.5rem;
+  margin-top: 2%;
+}
 
-  .calendario{
-    width: 25%;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-  }
+.texto-hora-sport{
+  font-size: 1.5rem;
+  color: black;
+  font-family: Cocogoose;
+}
 
-  .boton-fecha{
-    margin-bottom: 1rem;
-  }
+.calendario-boton{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+}
 
-  .formulario-horas-sport{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .contenedor-datos{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-  }
-
-  .horas-deporte{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .horas:last-child{
-    width: 100%;
-  }
+.calendario{
+  width: 50%;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  border: none;
+  border-bottom: 1px solid lightgray;
+}
 
 
-  .botones-reservas{
-    font-weight: bold;
-  }
+.formulario-horas-sport{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contenedor-datos{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.horas-deporte{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.horas:last-child{
+  width: 100%;
+}
 
 
-  /* FIN RESERVAS (BOOKINGS) */
+.botones-reservas{
+  font-weight: bold;
+}
+
+
+/* FIN RESERVAS (BOOKINGS) */
 
 
 
@@ -393,45 +385,47 @@ h1{
 /* IMAGENES (IMAGES) */
 /* ////////////////////////////////////////////////////// */
 
-
 .contenedor-imagenes{
   display: grid;
-  gap: 1rem;
-  grid-auto-rows: minmax(1px, auto);
-  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
-  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(10px, auto);
+  margin-top: 2%;
+  text-align: center;
   align-items: center;
-  justify-content: center;
+  border-radius: 10px;
 }
 
 .contenedor-imagenes>img{
-  -webkit-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
+-webkit-transform: scale(1);
+transform: scale(1);
+-webkit-transition: .3s ease-in-out;
+transition: .3s ease-in-out;
 }
 
 #imagen01, #imagen02, #imagen03, #imagen04, #imagen05, #imagen06, #imagen07, #imagen08, #imagen09, #imagen10{
-  border: 1px solid #015BB7;
-  border-radius: 6px;
-  -webkit-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
+border: 1px solid black;
+border-radius: 6px;
+-webkit-transform: scale(1);
+transform: scale(1);
+-webkit-transition: .3s ease-in-out;
+transition: .3s ease-in-out;
+
 }
 
 #imagen01:hover, #imagen02:hover, #imagen03:hover, #imagen04:hover, #imagen05:hover, #imagen06:hover, #imagen07:hover, #imagen08:hover, #imagen09:hover, #imagen10:hover{
-  -webkit-transform: scale(1.3);
-	transform: scale(1.3);
-  border-radius: 6px;
+-webkit-transform: scale(1.3);
+transform: scale(1.3);
+border-radius: 6px;
 }
 
 .mensaje-imagenes{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 1.2rem;
+width: 100%;
+display: flex;
+justify-content: center;
+font-weight: bold;
+font-size: 15px;
+margin-top: 3%;
 }
 
 
@@ -441,76 +435,293 @@ h1{
 
 
 
-/* ////////////////////////////////////////////////////// */
-/* FOOTER */
-/* ////////////////////////////////////////////////////// */
 
-  .contenedor-footer{
-    margin-top: 1rem;
-    background-color: black;
-    color: white;
-    border-radius: 8px;
+/* FOOTER */
+.contenedor-footer{
+  margin-top: 1rem;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+
+.footer-general{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.footer-social{
+  margin-left: 0.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-social-titulo{
+  color: #015BB7;
+  height: 100%;
+}
+
+.footer-social-imagenes{
+  width:100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.footer-contacto{
+  text-align: center;
+}
+
+.correo{
+  margin-top: 1rem;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.footer-informacion{
+  justify-content: center;
+  align-items: center;
+}
+
+.lista-informacion{
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.texto-privacidad{
+  margin-top: 00.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+@media screen and (min-width: 1000px) and (max-width: 1299px){
+  .footer-social{
+    display: none;
   }
 
-  .footer-general{
+  .info-somos{
+    display: none;
+  }
+
+  .contenedor-info{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 6rem;
+    grid-auto-rows: minmax(10px, auto);
+
+  }
+
+  .info-deportes{
+    border: 2px solid black;
+    grid-column: 2;
+    grid-row: 1/5;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .texto-hora-sport{
+    font-size: 20px;
+  }
+
+  /***********/
+  /* IMÁGENES */
+  /**********/
+
+
+}
+
+
+
+
+@media screen and (min-width: 800px) and (max-width: 999px){
+
+  /***********/
+  /* DASHBOARD */
+  /**********/
+  .info-foto{
+    display: none;
+  }
+
+  .contenedor-info{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 6rem;
+    grid-auto-rows: minmax(10px, auto);
+  }
+
+  .info-deportes{
+    border: 2px solid black;
+    grid-column: 2;
+    grid-row: 1/5;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .texto-deportes{
+    font-size: 15px;
+  }
+
+  /***********/
+  /* USER */
+  /**********/
+
+  .titulos-datos{
+    font-size: 10px;
+  }
+
+  .mis-datos-submit{
+    width: 50%;
+    font-size: 10px;
+  }
+
+  .instrucciones-datos{
+    font-size: 12px;
+  }
+
+  .reservas{
+    height: 70%;
+  }
+
+  .titulo-reservas{
+    font-size: 12px;
+  }
+
+  .reserva-info{
+    font-size: 11px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mis-datos-titulo{
+    font-size: 20px;
+  }
+
+  /***********/
+  /* RESERVAS */
+  /**********/
+
+  .calendario-boton{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  .boton-fecha{
+    margin-bottom: 0;
+    height: 30%;
+  }
+
+  .contenedor-boton{
+    height: 50%;
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
+
+  .texto-hora-sport{
+    font-size: 14px;
+    font-family: Cocogoose;
+  }
+
+
+  .contenedor-datos{
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-    flex-wrap: nowrap;
-    height: 100%;
   }
 
-  .footer-social{
-    margin-left: 0.5rem;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  .horas-deporte{
+    font-size: 15px;
   }
 
-  .footer-social-titulo{
-    color: #015BB7;
-    font-weight: bold;
-  }
 
-  .footer-social-imagenes{
-    width:100%;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: center;
+  .texto-fecha{
+    font-size: 18px;
     margin-top: 5%;
   }
 
-  .footer-contacto{
+  .calendario{
+    font-size: 15px;
+    width: 60%;
+  }
+
+  .botones-reservas{
+    font-size: 12px;
+  }
+
+
+  /***********/
+  /* IMÁGENES */
+  /**********/
+
+  .contenedor-imagenes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(10px, auto);
+    margin-top: 2%;
     text-align: center;
-  }
+    }
 
-  .correo{
-    margin-top: 2rem;
-    font-size: 1.3rem;
-    font-weight: bold;
-  }
+    .contenedor-imagenes>img{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    }
 
-  .footer-informacion{
-    justify-content: center;
-    align-items: center;
-  }
+    #imagen01, #imagen02, #imagen03, #imagen04, #imagen05, #imagen06, #imagen07, #imagen08, #imagen09, #imagen10{
+    border: 1px solid #015BB7;
+    border-radius: 6px;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    width: 75%;
+    }
+
+    #imagen01:hover, #imagen02:hover, #imagen03:hover, #imagen04:hover, #imagen05:hover, #imagen06:hover, #imagen07:hover, #imagen08:hover, #imagen09:hover, #imagen10:hover{
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    border-radius: 6px;
+    }
+
+
+
+
+  /***********/
+  /* FOOTER */
+  /**********/
 
   .lista-informacion{
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-  }
-
-  .lista-informacion>li:hover, .texto-privacidad>span:hover{
-    cursor: pointer;
+    font-size: 12px;
   }
 
   .texto-privacidad{
-    margin-top: 0.5rem;
-    display: flex;
-    flex-direction: column;
+    font-size: 12px;
   }
 
-/* FIN FOOTER */
+  .footer-social{
+    display: none;
+  }
+
+  .correo{
+    font-size: 12px;
+  }
+}

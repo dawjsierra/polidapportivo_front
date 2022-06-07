@@ -19,3 +19,21 @@ li{
 #logout{
   margin-top: 80%;
 }
+
+@media screen and (min-width: 1000px) and (max-width: 1299px){
+  li{
+    background-color: white;
+    font-size: 15px;
+    font-family: Cocogoose;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 999px){
+  li{
+    background-color: white;
+    font-size: 11px;
+    font-family: Cocogoose;
+    text-align: center;
+  }
+
+}

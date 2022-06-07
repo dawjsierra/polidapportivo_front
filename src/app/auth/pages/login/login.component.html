@@ -1,22 +1,22 @@
-<form class="formulario-login h-100" autocomplete="off" [formGroup]="miFormulario" (ngSubmit)="login()">
+<form class="formularios-auth" autocomplete="off" [formGroup]="miFormulario" (ngSubmit)="login()">
 
-  <div class="titulo-form">LOGIN</div>
+  <div class="titulo-login">LOGIN</div>
 
-  <div class="zona-email">
-    <input class="inputs-login form-control-plaintext w-75" type="email" formControlName="email" placeholder="CORREO ELECTRÓNICO">
-    <span class=""></span>
+  <div class="user-pass-login">
+    <div class="zona-email">
+      <input class="inputs-auth form-control-plaintext text-center" type="email" formControlName="email" placeholder="CORREO ELECTRÓNICO">
+    </div>
+
+    <div class="zona-password">
+      <input class="inputs-auth form-control-plaintext text-center" type="password" formControlName="password" placeholder="CONTRASEÑA">
+    </div>
   </div>
 
-  <div class="zona-password">
-    <input class="inputs-login form-control-plaintext w-75" type="password" formControlName="password" placeholder="CONTRASEÑA">
-    <span class=""></span>
-  </div>
-
-  <div class="zona-boton mt-5">
+  <div class="zona-boton mt-2">
     <button class="boton-submit w-25" type="submit" [disabled]="miFormulario.invalid">INICIAR SESIÓN</button>
   </div>
 
-  <div class="zona-redireccion mt-5">
+  <div class="zona-redireccion mt-5 mb-3">
       <span class="sugerencia">¿No tienes cuenta?</span>
       <a routerLink="/auth/registro" class="redireccion"> REGISTRATE AQUÍ</a>
   </div>

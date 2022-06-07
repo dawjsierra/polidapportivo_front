@@ -1,40 +1,43 @@
-<div class="container-fluid bg-light vh-100 col-12 overflow-hidden">
+<div class="container-fluid col-12 vh-100">
   <div class="row py-3 h-100">
     <!-- SIDEBAR -->
-    <div class="col-lg-2 col-md-2 col-xs-1" id="sidebar">
+    <div class="col-lg-2 col-md-3 col-xs-4" id="sidebar">
       <app-sidebar></app-sidebar>
     </div>
 
-    <div class="contenido-user col-10" id="main">
+    <div class="contenido-user col-lg-10 col-md-9 col-xs-8" id="main">
       <div class="contenedor-titulo" id="titulo">
         <app-header></app-header>
       </div>
 
       <div class="contenedor-datos-reservas h-50">
         <div class="mis-datos-titulo text-center">MIS DATOS</div>
-        <div class="text-center font-size">En caso de que quiera actualizar sus datos, rellene todos los campos y seleccione "Actualizar"</div>
+        <div class="text-center font-size instrucciones-datos">En caso de que quiera actualizar sus datos, rellene todos los campos y seleccione "Actualizar"</div>
 
-        <form class="mis-datos-div h-25 form" [formGroup]="formUpdate" (ngSubmit)="updateUser()" autocomplete="off">
-          <!-- email -->
-          <div class="mis-datos-bloques rounded">
-            <div class="titulos-datos">CORREO ELECTRÓNICO</div>
-            <input class="form-control-plaintext w-75 text-white" type="email" formControlName="email" placeholder="{{email}}">
+        <form class="mis-datos-div form" [formGroup]="formUpdate" (ngSubmit)="updateUser()" autocomplete="off">
+          <div class="inputs-update">
+            <!-- email -->
+            <div class="mis-datos-bloques rounded">
+              <div class="titulos-datos">CORREO</div>
+              <input class="form-control-plaintext text-white" type="email" formControlName="email" placeholder="{{email}}">
+            </div>
+            <!-- nombre -->
+            <div class="mis-datos-bloques rounded">
+              <div class="titulos-datos">NOMBRE</div>
+              <input class="form-control-plaintext text-white" type="text" formControlName="name" placeholder="{{name}}">
+            </div>
+            <!-- apellidos -->
+            <div class="mis-datos-bloques rounded">
+              <div class="titulos-datos">APELLIDOS</div>
+              <input class="form-control-plaintext text-white" type="text" formControlName="surname" placeholder="{{surname}}">
+            </div>
+            <!-- password -->
+            <div class="mis-datos-bloques rounded">
+              <div class="titulos-datos">CONTRASEÑA</div>
+              <input class="form-control-plaintext text-white" type="password" formControlName="password" placeholder="Nueva contraseña">
+            </div>
           </div>
-          <!-- nombre -->
-          <div class="mis-datos-bloques rounded">
-            <div class="titulos-datos">NOMBRE</div>
-            <input class="form-control-plaintext w-75 text-white" type="text" formControlName="name" placeholder="{{name}}">
-          </div>
-          <!-- apellidos -->
-          <div class="mis-datos-bloques rounded">
-            <div class="titulos-datos">APELLIDOS</div>
-            <input class="form-control-plaintext w-75 text-white" type="text" formControlName="surname" placeholder="{{surname}}">
-          </div>
-          <!-- password -->
-          <div class="mis-datos-bloques rounded">
-            <div class="titulos-datos">CONTRASEÑA</div>
-            <input class="form-control-plaintext w-75 text-white" type="password" formControlName="password" placeholder="Nueva contraseña">
-          </div>
+
           <!-- enviar -->
           <div class="mis-datos-submit rounded">
             <button type="submit" value="Actualizar" class="btn-group boton-actualizar" [disabled]="formUpdate.invalid">ACTUALIZAR</button>
@@ -50,9 +53,9 @@
               <div class="reserva-info text-center"><div class="titulo-reservas">ID RESERVA {{ reserva.id }}</div></div>
               <div class="reserva-info text-center">{{ reserva.date | date: 'mediumDate' }} a las {{ reserva.hour}}</div>
               <div class="reserva-info text-center">{{ reserva.sport | uppercase}}</div>
-              <div class="borrar-reservas">
+              <!-- <div class="borrar-reservas">
                 <input value="Eliminar" type="submit" class="boton-borrar rounded">
-              </div>
+              </div> -->
             </div>
           </div>
         </div>

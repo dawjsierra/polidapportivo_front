@@ -1,29 +1,27 @@
-<form class="formulario-register h-100" autocomplete="off" [formGroup]="miFormulario" (ngSubmit)="register()">
+<form class="formularios-auth h-100" autocomplete="off" [formGroup]="miFormulario" (ngSubmit)="register()">
 
-  <div class="titulo-form">REGISTRO</div>
+  <div class="titulo-register">REGISTRO</div>
 
-  <div class="zona-email">
-      <input class="inputs-register form-control-plaintext w-75" type="email" formControlName="email" placeholder="CORREO ELECTRÓNICO" #emailRef>
+  <div class="filas-inputs-register">
+      <input class="inputs-auth form-control-plaintext zona-email text-center" type="email" formControlName="email" placeholder="CORREO ELECTRÓNICO" #emailRef>
+      <input class="inputs-auth form-control-plaintext zona-password text-center" type="password" formControlName="password" placeholder="CONTRASEÑA">
   </div>
 
-  <div class="zona-password">
-      <input class="inputs-register form-control-plaintext w-75" type="password" formControlName="password" placeholder="CONTRASEÑA (MINIMO 4 CARACTERES)">
-  </div>
-
-  <div class="nombre-apellidos w-75">
-      <input class="inputs-register form-control-plaintext w-25" type="text" formControlName="name" placeholder="NOMBRE">
-      <input class="inputs-register form-control-plaintext w-50" type="text" formControlName="surname" placeholder="APELLIDOS">
+  <div class="filas-inputs-register">
+      <input class="inputs-auth form-control-plaintext zona-nombre" type="text" formControlName="name" placeholder="NOMBRE">
+      <input class="inputs-auth form-control-plaintext zona-apellidos" type="text" formControlName="surname" placeholder="APELLIDOS">
   </div>
 
   <div class="d-none">
-    <input class="inputs-register form-control-plaintext w-75" type="number" formControlName="role" placeholder="">
+    <input class="inputs-register form-control-plaintext" type="number" formControlName="role" placeholder="">
   </div>
+
 
   <div class="zona-boton">
-    <button class="boton-submit w-25 mt-5" type="submit" [disabled]="miFormulario.invalid">REGISTRARSE</button>
+    <button class="boton-submit-register w-25 mt-2" type="submit" [disabled]="miFormulario.invalid">REGISTRARSE</button>
   </div>
 
-  <div class="zona-redireccion mt-5">
+  <div class="zona-redireccion mt-3 mb-2">
     <span class="sugerencia">¿Ya tienes cuenta?</span>
     <a routerLink="/auth/login" class="redireccion"> VOLVER AL LOGIN</a>
 </div>
