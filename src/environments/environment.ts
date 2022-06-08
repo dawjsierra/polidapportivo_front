@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseURL: "http://proyecto-daw.lan/api"
+  baseURL: "http://polidapportivo.com/api"
 };
 
 /*

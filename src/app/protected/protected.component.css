@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Cocogoose';
+  src: url('../../assets/fonts/cocogoose/CocogooseProTrial.ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+
 /* DASHBOARD */
 
 .contenedor-principal{
@@ -676,6 +684,7 @@ margin-top: 3%;
     grid-gap: 10px;
     grid-auto-rows: minmax(10px, auto);
     margin-top: 2%;
+    margin-bottom: 2%;
     text-align: center;
     }
 
