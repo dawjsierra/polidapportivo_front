@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 import { User } from '../interfaces/interfaces';
 import { AdminService } from '../services/admin.service';
 
@@ -11,6 +12,8 @@ import { AdminService } from '../services/admin.service';
   providers:[AdminService]
 })
 export class AdminComponent implements OnInit {
+
+  @ViewChild('botonBorrado') botonBorrado!: ElementRef;
 
   arrUsuarios: User[] = [];
 
@@ -30,6 +33,20 @@ export class AdminComponent implements OnInit {
     });
   }
 
+  deleteUser(id:number){
+    console.log(id)
+    this.adminService.deleteUser(id)
+    .subscribe(resp=>{
+      if(resp === "OK"){
+        Swal.fire('Usuario borrado correctamente', '', 'success' );
+        this.router.navigateByUrl('/user');
+      }else{
+        Swal.fire('Algo salió mal', '', 'error' );
+        this.router.navigateByUrl('/admin');
+      }
+    })
+  }
+
 
   findUser(){
     const correo = this.formEmail.get('correo')!.value;
@@ -39,8 +56,6 @@ export class AdminComponent implements OnInit {
   }
 
   get usuarios(){
-
     return ;
   }
-
 }

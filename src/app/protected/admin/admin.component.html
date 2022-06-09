@@ -1,7 +1,7 @@
 <div class="container-fluid vh-100 col-12">
   <div class="row py-3 h-100">
     <!-- SIDEBAR -->
-    <div class="col-lg-2 col-md-3 col-xs-4" id="sidebar">
+    <div class="col-lg-2 col-md-3 col-xs-4 mb-2" id="sidebar">
       <app-sidebar></app-sidebar>
     </div>
 
@@ -11,26 +11,35 @@
         <app-header></app-header>
       </div>
 
-      <div class="contenedor-admin h-50 w-100 rounded ">
+      <div class="contenedor-admin w-100 rounded ">
+        <!-- PARTE DE USUARIOS -->
         <div class="admin-usuarios-reservas h-100">
           <div class="textos-admin">USUARIOS</div>
+          <!-- FORMULARIO PARA BUSCAR USUARIOS -->
           <form class="admin-buscar " autocomplete="off" [formGroup]="formEmail" (ngSubmit)="findUser()">
             <input class="inputs-admin form-control-plaintext text-center" type="text" formControlName="correo"  name="email" placeholder="Email de usuario">
-            <button class="boton-buscar rounded" type="submit" [disabled]="formEmail.invalid">Buscar</button>
+            <button class="boton-buscar rounded" type="submit" [disabled]="">Buscar</button>
           </form>
-          <div class="admin-emails h-50 w-100" >
-            <div class="bg-danger h-50 w-100" *ngFor="let usuario of arrUsuarios">
+          <!-- DONDE VA A APARECER EL USUARIO -->
+          <div class="admin-emails w-100" >
+            <div class="h-50 w-100" *ngFor="let usuario of arrUsuarios">
               <div *ngIf="arrUsuarios.length > 0">
-                <span>NOMBRE {{usuario.name}}</span>
-                <span>APELLIDOS {{usuario.surname}}</span>
-                <span>CORREO ELECTRÓNICO {{usuario.name}}</span>
-                <span>PASSWORD {{usuario.password}}</span>
+                <div>ID {{usuario.id}}</div>
+                <div>NOMBRE {{usuario.name}}</div>
+                <div>APELLIDOS {{usuario.surname}}</div>
+                <div>CORREO ELECTRÓNICO {{usuario.name}}</div>
+                <div>ROL {{usuario.role}}</div>
+                <div>FECHA CREACIÓN {{usuario.created_at | date: 'mediumDate'}}</div>
               </div>
+              <button type="submit" (click)="deleteUser(usuario.id)">BORRAR USUARIO</button>
             </div>
           </div>
         </div>
+
+        <!-- PARTE DE RESERVAS -->
         <div class="admin-usuarios-reservas h-100">
           <div class="textos-admin">RESERVAS</div>
+          <!-- FORMULARIO PARA BUSCAR RESERVAS -->
           <form class="admin-buscar">
             <input class="input-admin-fecha form-control-plaintext text-center" type="date">
             <button class="boton-buscar rounded" type="submit" [disabled]="">Buscar</button>
@@ -38,7 +47,7 @@
         </div>
       </div>
 
-      <div class="contenedor-footer">
+      <div class="contenedor-footer mb-2">
         <app-footer></app-footer>
       </div>
 

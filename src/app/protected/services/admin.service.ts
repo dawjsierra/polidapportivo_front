@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { environment } from '../../../environments/environment.prod';
-import { FindUserResponse, User } from '../interfaces/interfaces';
+import { FindUserResponse, User, DeleteUserResponse } from '../interfaces/interfaces';
 import { tap, map, catchError } from 'rxjs/operators';
 import { of } from 'rxjs';
 
@@ -30,6 +30,17 @@ export class AdminService {
       }),
       map(resp=>resp.usuarios),
       catchError(err => of(err.error.msg))
+    )
+  }
+
+  deleteUser(id: number){
+    const url = `${this.baseURL}/deleteusers/${id}`;
+    const headers = new HttpHeaders({'Authorization':"mi-token-secreto"});
+
+    return this.http.get<DeleteUserResponse>(url, {headers})
+    .pipe(
+      map(resp=>resp.status),
+      catchError( err => of(err.error.msg))
     )
   }
 }

@@ -14,6 +14,8 @@ export interface User{
   email: string;
   password: string;
   role: number;
+  created_at?:string;
+  updated_at?:string;
 }
 
 export interface BookingsUserResponse{
@@ -54,5 +56,9 @@ export interface UpdateUser{
 }
 
 export interface FindUserResponse{
-  usuarios: User[];
+  usuarios: User[]
+}
+
+export interface DeleteUserResponse{
+  "status":string
 }

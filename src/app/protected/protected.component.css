@@ -515,6 +515,7 @@ margin-top: 3%;
   justify-content: space-between;
   width: 100%;
   background-color: white;
+  height: 65%;
 }
 
 .textos-admin{
@@ -559,6 +560,8 @@ margin-top: 3%;
 
 .admin-emails{
   overflow-y: scroll;
+  height: 80%;
+  margin-left: 2%;
 }
 
 
