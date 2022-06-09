@@ -137,7 +137,7 @@
   flex-direction: column;
   margin-left: 5%;
   margin-right: 5%;
-  font-size: 18px;
+  font-size: 15px;
   height: 75%;
 }
 
@@ -508,6 +508,58 @@ margin-top: 3%;
   flex-direction: column;
 }
 
+/* ADMIN */
+.contenedor-admin{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+}
+
+.textos-admin{
+  font-family: Cocogoose;
+  font-size: 30px;
+}
+
+.admin-usuarios-reservas{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  width: 45%;
+}
+
+.admin-buscar{
+  width: 90%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border-bottom: 1px solid lightgray;
+}
+
+
+.inputs-admin{
+  width: 30%;
+  outline: none;
+}
+
+.input-admin-fecha{
+  width: 20%;
+  outline: none;
+  margin-right: 2%;
+}
+
+.boton-buscar{
+  width: 10%;
+}
+
+.admin-emails{
+  overflow-y: scroll;
+}
 
 
 

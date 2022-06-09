@@ -15,7 +15,6 @@ export class BookingService {
   private baseURL: string = environment.baseURL;
   private id: number = Number(localStorage.getItem('id'));
   public _reservas: Booking[] = [];
-  private _reserva!:ReservaInterface;
 
   get reservas(){
     return {... this._reservas};
@@ -32,9 +31,6 @@ export class BookingService {
     return this.http.get<BookingsUserResponse>(url, {headers})
     .pipe(
       tap(resp => {
-          for(let i = 0; i<resp.bookings.length; i++){
-            this._reservas.push(resp.bookings[i]);
-        }
         this.router.navigateByUrl('/user')
         return resp.bookings;
       }),

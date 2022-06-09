@@ -10,6 +10,7 @@ import { BookingComponent } from './booking/booking.component';
 import { ImagesComponent } from './images/images.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './shared/header/header.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { HeaderComponent } from './shared/header/header.component';
     UserComponent,
     BookingComponent,
     ImagesComponent,
-    HeaderComponent
+    HeaderComponent,
+    AdminComponent
   ],
   imports: [
     CommonModule,

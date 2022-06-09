@@ -21,7 +21,6 @@ export class UserComponent implements OnInit {
   constructor(private bookingService: BookingService, private router: Router, private fb: FormBuilder) {}
 
   ngOnInit(): void {
-    console.log("hola en el oninit");
     this.bookingService.bookingsUsers().subscribe(reservas=>this.arrReservas=reservas);
 
     this.formUpdate = this.fb.group({

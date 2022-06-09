@@ -52,3 +52,7 @@ export interface UpdateUser{
   updated_at: string,
   remember_token: null;
 }
+
+export interface FindUserResponse{
+  usuarios: User[];
+}

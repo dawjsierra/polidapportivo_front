@@ -15,6 +15,11 @@ export class SidebarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  get role(): number{
+    let rol = Number(localStorage.getItem('role'));
+    return rol;
+  }
+
   user(){
     this.router.navigateByUrl('/user');
   }

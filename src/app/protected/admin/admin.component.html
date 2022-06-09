@@ -1,0 +1,48 @@
+<div class="container-fluid vh-100 col-12">
+  <div class="row py-3 h-100">
+    <!-- SIDEBAR -->
+    <div class="col-lg-2 col-md-3 col-xs-4" id="sidebar">
+      <app-sidebar></app-sidebar>
+    </div>
+
+    <div class="contenido-bookings col-lg-10 col-md-9 col-xs-8">
+
+      <div class="contenedor-titulo" id="titulo">
+        <app-header></app-header>
+      </div>
+
+      <div class="contenedor-admin h-50 w-100 rounded ">
+        <div class="admin-usuarios-reservas h-100">
+          <div class="textos-admin">USUARIOS</div>
+          <form class="admin-buscar " autocomplete="off" [formGroup]="formEmail" (ngSubmit)="findUser()">
+            <input class="inputs-admin form-control-plaintext text-center" type="text" formControlName="correo"  name="email" placeholder="Email de usuario">
+            <button class="boton-buscar rounded" type="submit" [disabled]="formEmail.invalid">Buscar</button>
+          </form>
+          <div class="admin-emails h-50 w-100" >
+            <div class="bg-danger h-50 w-100" *ngFor="let usuario of arrUsuarios">
+              <div *ngIf="arrUsuarios.length > 0">
+                <span>NOMBRE {{usuario.name}}</span>
+                <span>APELLIDOS {{usuario.surname}}</span>
+                <span>CORREO ELECTRÓNICO {{usuario.name}}</span>
+                <span>PASSWORD {{usuario.password}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="admin-usuarios-reservas h-100">
+          <div class="textos-admin">RESERVAS</div>
+          <form class="admin-buscar">
+            <input class="input-admin-fecha form-control-plaintext text-center" type="date">
+            <button class="boton-buscar rounded" type="submit" [disabled]="">Buscar</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="contenedor-footer">
+        <app-footer></app-footer>
+      </div>
+
+    </div>
+  </div>
+</div>
+

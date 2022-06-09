@@ -1,0 +1,82 @@
+.contenedor-imagenes{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(10px, auto);
+  margin-top: 2%;
+  text-align: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.contenedor-imagenes>img{
+-webkit-transform: scale(1);
+transform: scale(1);
+-webkit-transition: .3s ease-in-out;
+transition: .3s ease-in-out;
+}
+
+#imagen01, #imagen02, #imagen03, #imagen04, #imagen05, #imagen06, #imagen07, #imagen08, #imagen09, #imagen10{
+border: 1px solid black;
+border-radius: 6px;
+-webkit-transform: scale(1);
+transform: scale(1);
+-webkit-transition: .3s ease-in-out;
+transition: .3s ease-in-out;
+
+}
+
+#imagen01:hover, #imagen02:hover, #imagen03:hover, #imagen04:hover, #imagen05:hover, #imagen06:hover, #imagen07:hover, #imagen08:hover, #imagen09:hover, #imagen10:hover{
+-webkit-transform: scale(1.3);
+transform: scale(1.3);
+border-radius: 6px;
+}
+
+.mensaje-imagenes{
+width: 100%;
+display: flex;
+justify-content: center;
+font-weight: bold;
+font-size: 15px;
+margin-top: 3%;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1299px){
+
+}
+
+@media screen and (min-width: 800px) and (max-width: 999px){
+
+  .contenedor-imagenes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(10px, auto);
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+    }
+
+    .contenedor-imagenes>img{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    }
+
+    #imagen01, #imagen02, #imagen03, #imagen04, #imagen05, #imagen06, #imagen07, #imagen08, #imagen09, #imagen10{
+    border: 1px solid #284eee;
+    border-radius: 6px;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    width: 75%;
+    }
+
+    #imagen01:hover, #imagen02:hover, #imagen03:hover, #imagen04:hover, #imagen05:hover, #imagen06:hover, #imagen07:hover, #imagen08:hover, #imagen09:hover, #imagen10:hover{
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    border-radius: 6px;
+    }
+}
