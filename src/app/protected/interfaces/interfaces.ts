@@ -59,6 +59,10 @@ export interface FindUserResponse{
   usuarios: User[]
 }
 
+export interface FindBookingResponse{
+  bookings: Booking[]
+}
+
 export interface DeleteUserResponse{
   "status":string
 }

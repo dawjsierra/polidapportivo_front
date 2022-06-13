@@ -1,7 +1,7 @@
 <div class="container-fluid vh-100 col-12">
   <div class="row py-3 h-100">
     <!-- SIDEBAR -->
-    <div class="col-lg-2 col-md-3 col-xs-4 mb-2" id="sidebar">
+    <div class="col-lg-2 col-md-3 col-xs-4" id="sidebar">
       <app-sidebar></app-sidebar>
     </div>
 
@@ -13,41 +13,51 @@
 
       <div class="contenedor-admin w-100 rounded ">
         <!-- PARTE DE USUARIOS -->
-        <div class="admin-usuarios-reservas h-100">
+        <div class="admin-usuarios-reservas h-100 mt-3">
           <div class="textos-admin">USUARIOS</div>
           <!-- FORMULARIO PARA BUSCAR USUARIOS -->
           <form class="admin-buscar " autocomplete="off" [formGroup]="formEmail" (ngSubmit)="findUser()">
             <input class="inputs-admin form-control-plaintext text-center" type="text" formControlName="correo"  name="email" placeholder="Email de usuario">
-            <button class="boton-buscar rounded" type="submit" [disabled]="">Buscar</button>
+            <button class="boton-buscar rounded" type="submit" [disabled]="formEmail.invalid">Buscar</button>
           </form>
           <!-- DONDE VA A APARECER EL USUARIO -->
           <div class="admin-emails w-100" >
-            <div class="h-50 w-100" *ngFor="let usuario of arrUsuarios">
-              <div *ngIf="arrUsuarios.length > 0">
-                <div>ID {{usuario.id}}</div>
-                <div>NOMBRE {{usuario.name}}</div>
-                <div>APELLIDOS {{usuario.surname}}</div>
-                <div>CORREO ELECTRÓNICO {{usuario.name}}</div>
-                <div>ROL {{usuario.role}}</div>
-                <div>FECHA CREACIÓN {{usuario.created_at | date: 'mediumDate'}}</div>
+            <div class="div-resultados" *ngFor="let usuario of arrUsuarios">
+              <div *ngIf="arrUsuarios.length > 0" class="admin-usuarios rounded">
+                <div class="text-capitalize mt-2 nombre-usuario"><strong>{{usuario.name}} {{usuario.surname}}</strong></div>
+                <div class="text-lowercase">{{usuario.email}}</div>
+                <div>ID USUARIO: {{usuario.id}}</div>
+                <div class="text-uppercase">CREADO {{usuario.created_at | date: 'mediumDate'}}</div>
+                <button class="admin-boton-borrar rounded btn-dark text-center" type="submit" (click)="deleteUser(usuario.id)">BORRAR USUARIO</button>
               </div>
-              <button type="submit" (click)="deleteUser(usuario.id)">BORRAR USUARIO</button>
             </div>
           </div>
         </div>
 
         <!-- PARTE DE RESERVAS -->
-        <div class="admin-usuarios-reservas h-100">
+        <div class="admin-usuarios-reservas h-100 mt-3">
           <div class="textos-admin">RESERVAS</div>
           <!-- FORMULARIO PARA BUSCAR RESERVAS -->
-          <form class="admin-buscar">
-            <input class="input-admin-fecha form-control-plaintext text-center" type="date">
-            <button class="boton-buscar rounded" type="submit" [disabled]="">Buscar</button>
+          <form class="admin-buscar" autocomplete="off" [formGroup]="formFecha" (ngSubmit)="findBooking()">
+            <input class="input-admin-fecha form-control-plaintext text-center" formControlName="fecha" name="fecha" type="date">
+            <button class="boton-buscar rounded" type="submit" [disabled]="formFecha.invalid">Buscar</button>
           </form>
+
+          <div class="admin-emails w-100" >
+            <div class="div-resultados" *ngFor="let reserva of arrReservas">
+              <div *ngIf="arrReservas.length > 0" class="admin-usuarios rounded">
+                <div class="text-capitalize mt-2 nombre-usuario"><strong>{{reserva.date | date: 'mediumDate'}} A LAS {{reserva.hour}}</strong></div>
+                <div class="text-uppercase">{{reserva.sport}}</div>
+                <div>ID {{reserva.id}}</div>
+                <div>REALIZADA EL {{reserva.created_at | date: 'mediumDate'}}</div>
+                <button class="admin-boton-borrar rounded btn-dark text-center" type="submit" (click)="deleteBooking(reserva.id)">BORRAR RESERVA</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="contenedor-footer mb-2">
+      <div class="contenedor-footer">
         <app-footer></app-footer>
       </div>
 
