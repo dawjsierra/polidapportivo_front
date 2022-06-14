@@ -1,19 +1,25 @@
+<!-- Contenedor general -->
 <div class="container-fluid col-12 vh-100">
+  <!-- fila de las columnas -->
   <div class="row py-3 h-100">
-    <!-- SIDEBAR -->
+    <!-- Columna del sidebar -->
     <div class="col-lg-2 col-md-3 col-xs-4" id="sidebar">
       <app-sidebar></app-sidebar>
     </div>
 
+    <!-- columna del contenido -->
     <div class="contenido-user col-lg-10 col-md-9 col-xs-8" id="main">
       <div class="contenedor-titulo" id="titulo">
         <app-header></app-header>
       </div>
 
+      <!-- contenido de la vista -->
       <div class="contenedor-datos-reservas h-50">
         <div class="mis-datos-titulo text-center">MIS DATOS</div>
+        <!-- texto debajo "MIS DATOS" -->
         <div class="text-center font-size instrucciones-datos">En caso de que quiera actualizar sus datos, rellene todos los campos y seleccione "Actualizar"</div>
 
+        <!-- Contenido donde aparecen tus datos -->
         <form class="mis-datos-div form" [formGroup]="formUpdate" (ngSubmit)="updateUser()" autocomplete="off">
           <div class="inputs-update">
             <!-- email -->
@@ -45,13 +51,18 @@
         </form>
 
 
-
+        <!-- contenedor donde aprecen reservas -->
         <div class="mis-reservas-div h-50">
           <div class="mis-datos-titulo text-center h-25">MIS ÚLTIMAS RESERVAS</div>
+          <!-- bloque de las reservas -->
           <div class="reservas ">
+            <!-- ngFor recorriendo el array de la clase -->
             <div *ngFor="let reserva of arrReservas" class="cont-reservas h-100 rounded">
+              <!-- id reserva -->
               <div class="reserva-info text-center"><div class="titulo-reservas">ID RESERVA {{ reserva.id }}</div></div>
+              <!-- hora + fecha de reservas -->
               <div class="reserva-info text-center">{{ reserva.date | date: 'mediumDate' }} a las {{ reserva.hour}}</div>
+              <!-- deporte de la reserva con el pipe de uppercase -->
               <div class="reserva-info text-center">{{ reserva.sport | uppercase}}</div>
               <!-- <div class="borrar-reservas">
                 <input value="Eliminar" type="submit" class="boton-borrar rounded">
@@ -61,6 +72,7 @@
         </div>
       </div>
 
+      <!-- bloque footer -->
       <div class="contenedor-footer">
         <app-footer></app-footer>
       </div>

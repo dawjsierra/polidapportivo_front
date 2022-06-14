@@ -1,20 +1,23 @@
+<!-- contenedor general -->
 <div class="container-fluid  vh-100 col-12">
+  <!-- fila de las columnas -->
   <div class="row py-3 h-100">
-    <!-- SIDEBAR -->
+    <!-- columna sidebar -->
     <div class="col-lg-2 col-md-3 col-xs-4 mb-1" id="sidebar">
       <app-sidebar></app-sidebar>
     </div>
 
-    <!-- contenido página -->
+    <!-- columna del contenido -->
     <div class="contenido-bookings col-lg-10 col-md-9 col-xs-8">
 
-      <!-- titulo -->
+      <!-- div del titulo -->
       <div class="contenedor-titulo" id="titulo">
         <app-header></app-header>
       </div>
 
-      <!-- TODO: AQUÍ IRIAN LAS IMÁGENES -->
+      <!-- contenedor de todas las imagenes -->
       <div class="contenedor-imagenes h-75">
+        <!-- overflow para que lo que salga se oculte -->
         <div class="overflow-hidden rounded">
           <img id="imagen01" src="../../../assets/images/basket/basket07.jpeg" width="85%" alt="foto01">
         </div>
@@ -53,7 +56,7 @@
         </div>
       </div>
 
-      <div class="contenedor-footer mb-1 bg-black">
+      <div class="contenedor-footer mb-1">
         <app-footer></app-footer>
       </div>
     </div>

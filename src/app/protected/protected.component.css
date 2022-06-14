@@ -13,12 +13,6 @@
 
 
 
-
-
-
-
-
-
    /*************/
   /* DASHBOARD */
  /*************/
@@ -154,134 +148,151 @@
   /* MI PERFIL (USER) */
  /********************/
 
- .contenido-user{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+  /* contenido de la vista de usuario */
+  .contenido-user{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
-.contenedor-datos-reservas{
-  height: 25%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  border-radius: 6px;
-  background-color: white;
-}
+  /* contenedor general de usuario y reservas */
+  .contenedor-datos-reservas{
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 6px;
+    background-color: white;
+  }
 
-.mis-datos-div{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-top: 2%;
-}
+  /* bloque de datos del usuario */
+  .mis-datos-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 2%;
+  }
 
-.inputs-update{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 1rem;
-  grid-auto-rows: minmax(10px, auto);
-  width: 98%;
-}
+  /* inputs de los datos a actualizar */
+  .inputs-update{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    grid-auto-rows: minmax(10px, auto);
+    width: 98%;
+  }
 
-.mis-datos-bloques{
-  text-align: center;
-  background-color: black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  margin-bottom: 0.5rem;
-  border: 2px solid black;
-}
+  /* cajas individuales de los datos del usuario */
+  .mis-datos-bloques{
+    text-align: center;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 0.5rem;
+    border: 2px solid black;
+  }
 
-.mis-datos-bloques>input{
-  border-bottom: 1px solid black;
-  outline: none;
-  text-align: center;
-}
+  /* input de las cajas individuales de datos */
+  .mis-datos-bloques>input{
+    border-bottom: 1px solid black;
+    outline: none;
+    text-align: center;
+  }
 
-.mis-datos-submit{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 1%;
-  margin-bottom: 2%;
-}
+  /* boton submit de los datos de usuario */
+  .mis-datos-submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1%;
+    margin-bottom: 2%;
+  }
 
-.inputs-login{
-  outline: none;
-  text-align: center;
-  border-bottom: 1px solid black;
-  font-weight: bold;
-  margin-top: 3rem;
-}
+  /* .inputs-login{
+    outline: none;
+    text-align: center;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+    margin-top: 3rem;
+  } */
 
-.mis-reservas-div{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 98%;
-}
+  /* bloque de reservas */
+  .mis-reservas-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 98%;
+  }
 
-.mis-datos-titulo{
-  font-family: Cocogoose;
-  font-size: 1.5rem;
-}
+  /* titulo de los titulos de mi perfil*/
+  .mis-datos-titulo{
+    font-family: Cocogoose;
+    font-size: 1.5rem;
+  }
 
-.titulos-datos{
-  font-weight: bold;
-  color: white;
-  background-color: #284EEE;
-  width: 100%;
-}
+  /* titulos de las cajas de los datos del usuario */
+  .titulos-datos{
+    font-weight: bold;
+    color: white;
+    background-color: #284EEE;
+    width: 100%;
+  }
 
-.reservas{
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 1rem;
-  grid-auto-rows: minmax(5px, auto);
-}
+  /* organización de las cajas de las reservas */
+  .reservas{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1rem;
+    grid-auto-rows: minmax(5px, auto);
+  }
 
-.cont-reservas{
-  background-color: #284EEE;
-  border: 1px solid black;
-}
+  /* contenido de las reservas */
+  .cont-reservas{
+    background-color: #284EEE;
+    border: 1px solid black;
+  }
 
-.id-reserva{
-  text-align: center;
-}
+  /* id de las reservas */
+  .id-reserva{
+    text-align: center;
+  }
 
-.reserva-info{
-  margin: 0.5rem;
-  color: white;
-}
+  /* información de la reserva */
+  .reserva-info{
+    margin: 0.5rem;
+    color: white;
+  }
 
-.titulo-reservas{
-  background-color: black;
-  color: white;
-  font-weight: bold;
-}
+  /* titulo de las cajas de las reservas */
+  .titulo-reservas{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+  }
 
-.borrar-reservas{
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1rem;
-}
+  /* boton de borrado de las cajas de las reservas */
+  .borrar-reservas{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
 
-.boton-borrar{
-  text-align: center;
-  display: flex;
-  align-items: center;
-  font-size: 0.9rem;
-  background-color: black;
-  font-weight: bold;
-  color: white;
-}
+  /* boton de borrado */
+  .boton-borrar{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    background-color: black;
+    font-weight: bold;
+    color: white;
+  }
 /* FIN USER */
 
 
@@ -296,101 +307,101 @@
   /* RESERVAS (BOOKINGS) */
  /***********************/
 /* contenedor cuadro blanco */
-.contenedor-datos-reservas2{
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  background-color: white;
-}
+  .contenedor-datos-reservas2{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background-color: white;
+  }
 
-/* contenedor grande de bookings */
-.contenido-bookings{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+  /* contenedor grande de bookings */
+  .contenido-bookings{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
-/* contenedor donde se selecciona la fecha */
-.contenedor-fecha{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border-bottom: 1px solid black;
-}
+  /* contenedor donde se selecciona la fecha */
+  .contenedor-fecha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+  }
 
-/* formulario de fecha */
-.form-fecha{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+  /* formulario de fecha */
+  .form-fecha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 
-/* texto "SELECCIONE UN DÍA" */
-.texto-fecha{
-  color: black;
-  font-family: Cocogoose;
-  font-size: 1.5rem;
-  margin-top: 2%;
-}
+  /* texto "SELECCIONE UN DÍA" */
+  .texto-fecha{
+    color: black;
+    font-family: Cocogoose;
+    font-size: 1.5rem;
+    margin-top: 2%;
+  }
 
-/* texto "SELECCIONA UNA HORA" y "SELECCIONA DEPORTE A PRACTICAR" */
-.texto-hora-sport{
-  font-size: 1.5rem;
-  color: black;
-  font-family: Cocogoose;
-}
+  /* texto "SELECCIONA UNA HORA" y "SELECCIONA DEPORTE A PRACTICAR" */
+  .texto-hora-sport{
+    font-size: 1.5rem;
+    color: black;
+    font-family: Cocogoose;
+  }
 
-/* distribución del div del calendario + boton */
-.calendario-boton{
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  align-items: center;
-}
+  /* distribución del div del calendario + boton */
+  .calendario-boton{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+  }
 
-/* input fecha */
-.calendario{
-  width: 50%;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-  border: none;
-  border-bottom: 1px solid lightgray;
-}
+  /* input fecha */
+  .calendario{
+    width: 50%;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    border: none;
+    border-bottom: 1px solid lightgray;
+  }
 
-/* contenedor del formulario de horas sport */
-.formulario-horas-sport{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
+  /* contenedor del formulario de horas sport */
+  .formulario-horas-sport{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
 
-/* contenedor de inputs de hora + deporte */
-.contenedor-datos{
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 100%;
-}
+  /* contenedor de inputs de hora + deporte */
+  .contenedor-datos{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
 
-/* formato de divs de horas y deporte */
-.horas-deporte{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
+  /* formato de divs de horas y deporte */
+  .horas-deporte{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 
-/* botones de enciar en reservas */
-.botones-reservas{
-  font-weight: bold;
-}
+  /* botones de enciar en reservas */
+  .botones-reservas{
+    font-weight: bold;
+  }
 /* FIN RESERVAS (BOOKINGS) */
 
 
@@ -405,48 +416,43 @@
   /* IMAGENES (IMAGES) */
  /*********************/
 
-.contenedor-imagenes{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(10px, auto);
-  margin-top: 2%;
-  text-align: center;
-  align-items: center;
-  border-radius: 10px;
-}
+  /* contenedor donde van todas las imágenes, la distribución será grid */
+  .contenedor-imagenes{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(10px, auto);
+    margin-top: 2%;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+  }
 
-.contenedor-imagenes>img{
--webkit-transform: scale(1);
-transform: scale(1);
--webkit-transition: .3s ease-in-out;
-transition: .3s ease-in-out;
-}
+  /* imagenes dentro del contenedor */
+  .contenedor-imagenes>img{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
 
-#imagen01, #imagen02, #imagen03, #imagen04, #imagen05, #imagen06, #imagen07, #imagen08, #imagen09, #imagen10{
-border: 1px solid black;
-border-radius: 6px;
--webkit-transform: scale(1);
-transform: scale(1);
--webkit-transition: .3s ease-in-out;
-transition: .3s ease-in-out;
+  /* formato de las imágenes */
+  #imagen01, #imagen02, #imagen03, #imagen04, #imagen05, #imagen06, #imagen07, #imagen08, #imagen09, #imagen10{
+    border: 1px solid black;
+    border-radius: 6px;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
 
-}
+  }
 
-#imagen01:hover, #imagen02:hover, #imagen03:hover, #imagen04:hover, #imagen05:hover, #imagen06:hover, #imagen07:hover, #imagen08:hover, #imagen09:hover, #imagen10:hover{
--webkit-transform: scale(1.3);
-transform: scale(1.3);
-border-radius: 6px;
-}
-
-.mensaje-imagenes{
-width: 100%;
-display: flex;
-justify-content: center;
-font-weight: bold;
-font-size: 15px;
-margin-top: 3%;
-}
+  /* hover en las imágenes */
+  #imagen01:hover, #imagen02:hover, #imagen03:hover, #imagen04:hover, #imagen05:hover, #imagen06:hover, #imagen07:hover, #imagen08:hover, #imagen09:hover, #imagen10:hover{
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    border-radius: 6px;
+  }
 /* FIN IMAGENES */
 
 
@@ -461,69 +467,81 @@ margin-top: 3%;
   /* FOOTER */
  /**********/
 
-.contenedor-footer{
-  margin-top: 1rem;
-  background-color: black;
-  color: white;
-  border-radius: 10px;
-}
+  /* contenedor del footer en el htm */
+  .contenedor-footer{
+    margin-top: 1rem;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+  }
 
-.footer-general{
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
+  /* contenedor general del footer */
+  .footer-general{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
 
-.footer-social{
-  margin-left: 0.5rem;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
+  /* bloque de redes sociales en footer */
+  .footer-social{
+    margin-left: 0.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 
-.footer-social-titulo{
-  height: 100%;
-  font-weight: bold;
-  color: #284EEE;
-}
+  /* titulo de social */
+  .footer-social-titulo{
+    height: 100%;
+    font-weight: bold;
+    color: #284EEE;
+  }
 
-.footer-social-imagenes{
-  width:100%;
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 5%;
-}
+  /* imagenes del bloque footer */
+  .footer-social-imagenes{
+    width:100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5%;
+  }
 
-.footer-contacto{
-  text-align: center;
-}
+  /* alineacion del texto del bloque contacto */
+  .footer-contacto{
+    text-align: center;
+  }
 
-.correo{
-  margin-top: 1rem;
-  font-size: 20px;
-  font-weight: bold;
-}
+  /* correo electronico del footer */
+  .correo{
+    margin-top: 1rem;
+    font-size: 20px;
+    font-weight: bold;
+  }
 
-.footer-informacion{
-  justify-content: center;
-  align-items: center;
-}
+  /* distribucion del contenido del bloque "informacion" del footer */
+  .footer-informacion{
+    justify-content: center;
+    align-items: center;
+  }
 
-.lista-informacion{
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-}
 
-.texto-privacidad{
-  margin-top: 00.5rem;
-  display: flex;
-  flex-direction: column;
-}
+  /* lista de información */
+  .lista-informacion{
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+
+  /* texto del bloque de privacidad privacidad */
+  .texto-privacidad{
+    margin-top: 00.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  /* FIN DEL FOOTER */
 
 
 
@@ -536,94 +554,107 @@ margin-top: 3%;
    /*********/
   /* ADMIN */
  /*********/
-.contenedor-admin{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  background-color: white;
-  height: 65%;
-}
 
-.textos-admin{
-  font-family: Cocogoose;
-  font-size: 30px;
-}
+  /* contenedor blanco donde estarán los usuarios y reservas */
+  .contenedor-admin{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background-color: white;
+    height: 65%;
+  }
 
-.admin-usuarios-reservas{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
-  width: 45%;
-}
+  /* titulos de "USUARIOS" y "RESERVAS" */
+  .textos-admin{
+    font-family: Cocogoose;
+    font-size: 30px;
+  }
 
-.admin-buscar{
-  width: 90%;
-  height: 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  border-bottom: 1px solid lightgray;
-}
+  /* bloque dentro del cuadro blanco donde irá todo de usuarios y reservas */
+  .admin-usuarios-reservas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    width: 45%;
+  }
 
+  /* bloque de buscar */
+  .admin-buscar{
+    width: 90%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-bottom: 1px solid lightgray;
+  }
 
-.inputs-admin{
-  width: 30%;
-  outline: none;
-}
+  /* inputs de reservas y usuarios */
+  .inputs-admin{
+    width: 30%;
+    outline: none;
+  }
 
-.input-admin-fecha{
-  width: 20%;
-  outline: none;
-  margin-right: 2%;
-}
+  /* input de fecha */
+  .input-admin-fecha{
+    width: 20%;
+    outline: none;
+    margin-right: 2%;
+  }
 
-.boton-buscar{
-  width: 10%;
-}
+  /* boton "buscar" */
+  .boton-buscar{
+    width: 10%;
+  }
 
-.admin-emails{
-  overflow-y: scroll;
-  height: 80%;
-  width: 90%;
-}
+  /* contenedor donde aparecen los resultados obtenidos */
+  .admin-emails{
+    overflow-y: scroll;
+    height: 80%;
+    width: 90%;
+  }
 
-.div-resultados{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  height: 50%;
-  width: 100%;
-}
+  /* bloque de resultados obtenidos */
+  .div-resultados{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 50%;
+    width: 100%;
+  }
 
-.admin-usuarios{
-  border: 1px solid black;
-  background-color: #284EEE;
-  color: white;
-  align-items: center;
-  justify-content: space-around;
-  margin-top: 5px;
-  text-align: center;
-  height: 75%;
-  width: 50%;
-}
+  /* bloques individuales de los resultados */
+  .admin-usuarios{
+    border: 1px solid black;
+    background-color: #284EEE;
+    color: white;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5px;
+    text-align: center;
+    height: 75%;
+    width: 50%;
+  }
 
-.admin-boton-borrar{
-  background-color: black;
-  color: white;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 3%;
-  width: 50%;
-}
+  /* boton borrar de los resultados */
+  .admin-boton-borrar{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 3%;
+    width: 50%;
+  }
 
-.nombre-usuario{
-  margin-bottom: 10px;
-}
+  /* formato lo importante de los resultados (parte superior) */
+  .nombre-usuario{
+    margin-bottom: 10px;
+  }
+  /* FIN DE ADMIN */
 
 
 

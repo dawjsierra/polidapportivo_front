@@ -1,37 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { DashboardComponent } from '../../dashboard/dashboard.component';
-import { BookingService } from '../../services/booking.service';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent{
 
-  constructor(private router: Router, private bookingService : BookingService) { }
+  //  inyeccion del servicio
+  constructor(private router: Router) { }
 
-  ngOnInit(): void {
-  }
+  //   getter del rol
+    get role(): number{
+      let rol = Number(localStorage.getItem('role'));
+      return rol;
+    }
 
-  get role(): number{
-    let rol = Number(localStorage.getItem('role'));
-    return rol;
-  }
-
-  user(){
-    this.router.navigateByUrl('/user');
-  }
-
-  reservas(){
-    this.router.navigateByUrl('/reservas');
-  }
-
-  images(){
-    this.router.navigateByUrl('/image');
-  }
-
+  //  funcion logout, boora toda la local y te redirige a /auth
   logout(){
     localStorage.removeItem('id');
     localStorage.removeItem('name');

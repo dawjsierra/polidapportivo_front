@@ -14,15 +14,22 @@ import Swal from 'sweetalert2';
 })
 export class UserComponent implements OnInit {
 
+  //  array de reservas
   arrReservas: Booking[] = [];
 
+  //  formulario de actualizar datos
   formUpdate: FormGroup = new FormGroup({});
 
+  //  inyección de servicios
   constructor(private bookingService: BookingService, private router: Router, private fb: FormBuilder) {}
 
+  //  ngOnInit para inicializar formularios y hacer llamadas cuando se cargue la página
   ngOnInit(): void {
+
+    //  llamada al servicio para cargar el array de reservas
     this.bookingService.bookingsUsers().subscribe(reservas=>this.arrReservas=reservas);
 
+    //  formulario de datos, recogida de datos del user
     this.formUpdate = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       name: ['', [Validators.required, Validators.minLength(3)]],
@@ -31,6 +38,7 @@ export class UserComponent implements OnInit {
     })
   }
 
+  //  función para actualizar los datos del usuario
   updateUser(){
     let email: string = this.formUpdate.get('email')!.value;
     let name: string = this.formUpdate.get('name')!.value;
@@ -39,9 +47,7 @@ export class UserComponent implements OnInit {
     let role: number = Number(localStorage.getItem('role'));
     let id: number = Number(localStorage.getItem('id'));
 
-
-    //id: string, name: string, surname: string, email: string, password: string, role: number
-
+    //  llamada al servicio y procesamiento de respuesta
     this.bookingService.updateUser(id, name, surname, email, password, role)
     .subscribe(resp=>{
       if(resp.id === id){
@@ -54,6 +60,7 @@ export class UserComponent implements OnInit {
     })
   }
 
+  //  función para salir de la web
   logout(){
     localStorage.removeItem('id');
     localStorage.removeItem('name');
@@ -65,16 +72,17 @@ export class UserComponent implements OnInit {
     this.router.navigateByUrl('/auth');
   }
 
-  get name(){
-    return localStorage.getItem('name');
-  }
+  //  bloque de getters (útil para el html)
+    get name(){
+      return localStorage.getItem('name');
+    }
 
-  get surname(){
-    return localStorage.getItem('surname');
-  }
+    get surname(){
+      return localStorage.getItem('surname');
+    }
 
-  get email(){
-    return localStorage.getItem('email');
-  }
+    get email(){
+      return localStorage.getItem('email');
+    }
 
 }
