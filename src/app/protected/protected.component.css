@@ -157,7 +157,7 @@
 
   /* contenedor general de usuario y reservas */
   .contenedor-datos-reservas{
-    height: 25%;
+    height: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -256,7 +256,20 @@
   .cont-reservas{
     background-color: #284EEE;
     border: 1px solid black;
+    height: 90%;
   }
+
+    /* boton de borrado de las cajas de las reservas */
+    .borrar-reservas-user{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+      width: 60%;
+      font-size: 12px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
 
   /* id de las reservas */
   .id-reserva{
@@ -265,7 +278,7 @@
 
   /* información de la reserva */
   .reserva-info{
-    margin: 0.5rem;
+    margin: 2px;
     color: white;
   }
 
@@ -600,20 +613,20 @@
 
   /* input de fecha */
   .input-admin-fecha{
-    width: 20%;
+    width: 30%;
     outline: none;
     margin-right: 2%;
   }
 
   /* boton "buscar" */
   .boton-buscar{
-    width: 10%;
+    width: 15%;
   }
 
   /* contenedor donde aparecen los resultados obtenidos */
   .admin-emails{
     overflow-y: scroll;
-    height: 80%;
+    height: 70%;
     width: 90%;
   }
 
@@ -636,7 +649,7 @@
     justify-content: space-around;
     margin-top: 5px;
     text-align: center;
-    height: 75%;
+    height: 80%;
     width: 50%;
   }
 
@@ -646,8 +659,9 @@
     color: white;
     font-weight: bold;
     text-align: center;
+    font-size: 14px;
     margin-top: 3%;
-    width: 50%;
+    width: 60%;
   }
 
   /* formato lo importante de los resultados (parte superior) */

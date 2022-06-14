@@ -14,7 +14,7 @@
       </div>
 
       <!-- contenido de la vista -->
-      <div class="contenedor-datos-reservas h-50">
+      <div class="contenedor-datos-reservas">
         <div class="mis-datos-titulo text-center">MIS DATOS</div>
         <!-- texto debajo "MIS DATOS" -->
         <div class="text-center font-size instrucciones-datos">En caso de que quiera actualizar sus datos, rellene todos los campos y seleccione "Actualizar"</div>
@@ -57,15 +57,15 @@
           <!-- bloque de las reservas -->
           <div class="reservas ">
             <!-- ngFor recorriendo el array de la clase -->
-            <div *ngFor="let reserva of arrReservas" class="cont-reservas h-100 rounded">
+            <div *ngFor="let reserva of arrReservas" class="cont-reservas rounded">
               <!-- id reserva -->
               <div class="reserva-info text-center"><div class="titulo-reservas">ID RESERVA {{ reserva.id }}</div></div>
               <!-- hora + fecha de reservas -->
               <div class="reserva-info text-center">{{ reserva.date | date: 'mediumDate' }} a las {{ reserva.hour}}</div>
               <!-- deporte de la reserva con el pipe de uppercase -->
               <div class="reserva-info text-center">{{ reserva.sport | uppercase}}</div>
-              <div class="borrar-reservas">
-                <button class="admin-boton-borrar rounded btn-dark text-center" type="submit" (click)="deleteBooking(reserva.id)">BORRAR RESERVA</button>
+              <div class="borrar-reservas-user">
+                <button class="rounded btn-dark text-center" type="submit" (click)="deleteBooking(reserva.id)">BORRAR RESERVA</button>
               </div>
             </div>
           </div>
