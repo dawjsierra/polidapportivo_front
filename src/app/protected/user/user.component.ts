@@ -1,18 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { SidebarComponent } from '../shared/sidebar/sidebar.component';
 import { BookingService } from '../services/booking.service';
 import { Booking } from '../interfaces/interfaces';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
+import { AdminService } from '../services/admin.service';
 
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
   styleUrls: ['../protected.component.css'],
-  providers:[BookingService]
+  providers:[BookingService, AdminService]
 })
 export class UserComponent implements OnInit {
+
+  //  referencia al boton borrado
+  @ViewChild('botonBorrado') botonBorrado!: ElementRef;
 
   //  array de reservas
   arrReservas: Booking[] = [];
@@ -21,7 +25,7 @@ export class UserComponent implements OnInit {
   formUpdate: FormGroup = new FormGroup({});
 
   //  inyección de servicios
-  constructor(private bookingService: BookingService, private router: Router, private fb: FormBuilder) {}
+  constructor(private bookingService: BookingService, private router: Router, private fb: FormBuilder, private adminService: AdminService) {}
 
   //  ngOnInit para inicializar formularios y hacer llamadas cuando se cargue la página
   ngOnInit(): void {
@@ -55,6 +59,20 @@ export class UserComponent implements OnInit {
         this.logout();
       }else{
         Swal.fire('ERROR', 'ALGO SALIÓ MAL', 'error');
+        this.router.navigateByUrl('/user');
+      }
+    })
+  }
+
+  //  deleteBooking() --> método para borrar la reserva seleccionada
+  deleteBooking(id: number){
+    this.adminService.deleteBooking(id)
+    .subscribe(resp=>{
+      if(resp === "OK"){
+        Swal.fire('Reserva borrada correctamente', '', 'success' );
+        this.router.navigateByUrl('/dashboard');
+      }else{
+        Swal.fire('Algo salió mal', '', 'error' );
         this.router.navigateByUrl('/user');
       }
     })

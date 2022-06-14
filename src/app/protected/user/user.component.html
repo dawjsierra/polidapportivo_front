@@ -64,9 +64,9 @@
               <div class="reserva-info text-center">{{ reserva.date | date: 'mediumDate' }} a las {{ reserva.hour}}</div>
               <!-- deporte de la reserva con el pipe de uppercase -->
               <div class="reserva-info text-center">{{ reserva.sport | uppercase}}</div>
-              <!-- <div class="borrar-reservas">
-                <input value="Eliminar" type="submit" class="boton-borrar rounded">
-              </div> -->
+              <div class="borrar-reservas">
+                <button class="admin-boton-borrar rounded btn-dark text-center" type="submit" (click)="deleteBooking(reserva.id)">BORRAR RESERVA</button>
+              </div>
             </div>
           </div>
         </div>
