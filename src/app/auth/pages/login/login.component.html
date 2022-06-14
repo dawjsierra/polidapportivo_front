@@ -1,23 +1,31 @@
 <form class="formularios-auth" autocomplete="off" [formGroup]="miFormulario" (ngSubmit)="login()">
 
+  <!-- Titulo del cuadro de login -->
   <div class="titulo-login">LOGIN</div>
 
+  <!-- div inputs email y password -->
   <div class="user-pass-login">
+    <!-- div input email -->
     <div class="zona-email">
       <input class="inputs-auth form-control-plaintext text-center" type="email" formControlName="email" placeholder="CORREO ELECTRÓNICO">
     </div>
 
+    <!-- div input password -->
     <div class="zona-password">
       <input class="inputs-auth form-control-plaintext text-center" type="password" formControlName="password" placeholder="CONTRASEÑA">
     </div>
   </div>
 
+  <!-- div boton submit, estará valido o no dependiendo de si cumple los requisitos o no de miFofrumario (login.component.ts) -->
   <div class="zona-boton mt-2">
     <button class="boton-submit w-25" type="submit" [disabled]="miFormulario.invalid">INICIAR SESIÓN</button>
   </div>
 
+  <!-- div redireccion a register -->
   <div class="zona-redireccion mt-5 mb-3">
+      <!-- pregunta -->
       <span class="sugerencia">¿No tienes cuenta?</span>
+      <!-- redireccion -->
       <a routerLink="/auth/registro" class="redireccion"> REGISTRATE AQUÍ</a>
   </div>
 </form>

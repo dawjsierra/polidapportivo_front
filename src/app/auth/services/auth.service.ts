@@ -10,7 +10,10 @@ import { AuthResponse, Usuario, EmailsResponse, RegisterResponse } from '../inte
 })
 export class AuthService {
 
+  //  nos creamos una constante que será la base url, definida en /environments/environments.ts
   private baseURL: string = environment.baseURL;
+
+  //  nos creamos un objeto usuario, la ! es para indicarle que se fie de nosotros, que siempre vamos a tener un usuario
   private _usuario!: Usuario;
 
   get usuario(){
@@ -18,8 +21,10 @@ export class AuthService {
     //lo ponemos desestructurado para evitar que alguna vez manipulemos el user
   }
 
+  //  inyectamos en el contstructor el httpClient para poder realizar peticiones al servidor
   constructor(private http: HttpClient) { }
 
+  //  regiser() --> para mandarle los credenciales y el token de autenticacion
   register(email: string, password: string, name: string, surname: string, role: number){
     const url = `${ this.baseURL }/users`;
     const body = { email, password, name, surname, role };
@@ -27,12 +32,14 @@ export class AuthService {
 
     return this.http.post<RegisterResponse>(url, body, {headers})
     .pipe(
-      map(resp => resp.email),
+      map(resp => resp.email),  //  mapeamos la respuesta del servidor, nos llegara ahora el atributo email de la respuesta
       catchError( err => of(err.error.msg))
     )
 
   }
 
+
+  //  login() --> para mandarle las credenciales de login al servidor con su token
   login(email: string, password: string){
 
     const url = `${ this.baseURL }/users/login`;

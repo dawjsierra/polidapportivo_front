@@ -1,5 +1,8 @@
-/* LOGIN */
+  /*******/
+ /*LOGIN*/
+/*******/
 
+/* contenedor grande del login */
 .contenedor-login{
   display: flex;
   align-items: center;
@@ -12,6 +15,7 @@
   width: 50%;
 }
 
+/* contenedor mediando del login (titulo + form) */
 .contenedor2-login{
   width: 200%;
   height: 60%;
@@ -20,16 +24,20 @@
   justify-content: space-between;
 }
 
+
+/* contenedor del titulo del login */
 .contenedor-foto-login{
   text-align: center;
 }
 
+/* titulo del cuadro blanco "LOGIN" */
 .titulo-login{
   font-family: Cocogoose;
   font-size: 45px;
   text-align: center;
 }
 
+/* contenedor donde están los input email y password */
 .user-pass-login{
   display: flex;
   flex-direction: row;
@@ -39,6 +47,7 @@
   justify-content: space-around;
 }
 
+/* contenedor blanco */
 .contenedor-form-login{
   background-color: white;
   height: 50%;
@@ -46,6 +55,7 @@
   border-radius: 10px;
 }
 
+/* contenedor de los formularios de login */
 .formularios-auth{
   display: flex;
   flex-direction: column;
@@ -53,14 +63,17 @@
   height: 100%;
 }
 
+/* contenedor del input email */
 .zona-email{
   width: 40%;
 }
 
+/* contenedor de password */
 .zona-password{
   width: 35%;
 }
 
+/* inputs comunes de register y login */
 .inputs-auth{
   outline: none;
   border-bottom: 1px solid lightgray;
@@ -69,10 +82,12 @@
 
 }
 
+/* contenedor del submit */
 .zona-boton{
   text-align: center;
 }
 
+/* boton de submit */
 .boton-submit{
   border-radius: 10px;
   background-color: black;
@@ -80,18 +95,29 @@
   font-weight: bold;
 }
 
+/* contenedor de redireccion (pregunta + enlace) */
 .zona-redireccion{
   text-align: center;
 }
 
+ /* enlace */
 .redireccion{
   text-decoration: none;
 }
 
 
 
-/* REGISTER */
 
+
+
+
+
+
+  /***********/
+ /**REGISTER*/
+/***********/
+
+/* distribución de las filas de inputs del register */
 .filas-inputs-register{
   display: flex;
   flex-direction: row;
@@ -101,22 +127,26 @@
   justify-content: space-around;
 }
 
+/* titulo "REGISTER" */
 .titulo-register{
   text-align: center;
   font-family: Cocogoose;
   font-size: 30px;
 }
 
+/* input del nombre */
 .zona-nombre{
   text-align: center;
   width: 30%;
 }
 
+/* input apellidos */
 .zona-apellidos{
   text-align: center;
   width: 35%;
 }
 
+/* boton submit del register */
 .boton-submit-register{
   background-color: black;
   border-radius: 10px;
@@ -126,7 +156,7 @@
 
 
 /* PANTALLAS MEDIANAS*/
-
+  /* Rango de resolución comprendido entre un ancho de 1000px y 1299px */
 @media screen and (min-width: 1000px) and (max-width: 1299px) {
 
   .boton-submit{
@@ -135,9 +165,6 @@
     color: white;
     font-weight: bold;
   }
-
-
-  /* REGISTER */
 
   .filas-inputs-register{
     display: flex;
@@ -175,7 +202,9 @@
 }
 
 
-/* PANTALLAS PEQUEÑAS 800px> & <999px */
+/* PANTALLAS PEQUEÑAS*/
+  /* Rango de resolución comprendido entre un ancho de 1000px y 1299px */
+
 @media screen and (min-width: 800px) and (max-width: 999px){
   .boton-submit-register{
     font-size: 14px;

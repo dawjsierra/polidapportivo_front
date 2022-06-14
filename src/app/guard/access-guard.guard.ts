@@ -10,10 +10,12 @@ export class AccessGuardGuard implements CanActivate {
 
   constructor(private authService: AuthService, private router: Router){}
 
+  //  GUARD DE ACCESO --> NOS INDICA SI EL USUARIO ESTÁ LOGEADO O NO
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
+      //  si el metodo isLogged de authService devuelve true...
        if(this.authService.isLogged()){
          return true;
        }else{

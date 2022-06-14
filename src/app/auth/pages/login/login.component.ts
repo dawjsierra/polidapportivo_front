@@ -12,19 +12,19 @@ import Swal from 'sweetalert2';
 })
 export class LoginComponent {
 
-  //  Hay que importar el ReactiveFormsModule en el auth.module.ts, dentro ponemos los campos que va a tener el formulario
+  //  Formulario reactivo que recoge los datos introducidos en los inputs del login
   miFormulario: FormGroup = this.fb.group({
 
     email: ['', [Validators.required, Validators.email]],
-    password:['', [Validators.required, Validators.minLength(4)]]
-
-    //  sintaxis--> campo: [valorXDefecto, [validador1, validador2]];
+    password:['', [Validators.required, Validators.minLength(6)]]
   });
 
 
+  //inyectamos servicios en el constructor
   constructor(private fb: FormBuilder, private router: Router, private authService: AuthService) { }
-  //  trabajando con FormBuilder hace que los formularios sean mas sencillos
 
+
+  //metodo login, manda peticion al servidor para logearnos
   login(){
     console.log(this.miFormulario.value);
     const {email, password} = this.miFormulario.value;
