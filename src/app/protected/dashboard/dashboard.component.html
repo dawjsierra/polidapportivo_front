@@ -1,9 +1,12 @@
+<!-- Contenedor general -->
 <div class="container-fluid vh-100 col-12">
+  <!-- fila de las columnas -->
   <div class="row py-3 h-100 col-lg-12">
     <!-- SIDEBAR -->
     <div class="col-lg-2 col-md-3 col-xs-4" id="sidebar">
       <app-sidebar></app-sidebar>
     </div>
+
     <!-- CONTENIDO -->
     <div class="contenido col-lg-10 col-md-9 col-xs-8">
 
@@ -13,13 +16,17 @@
       </div>
 
 
-      <!-- Contenido -->
+      <!-- Cuerpo del dashboard -->
       <div class="contenedor-cuerpo">
+        <!-- fila contenedor de info (donde irá el contenido) -->
         <div class="row cont-info">
+          <!-- columna donde irá el contenido -->
           <div class="col-12 rounded contenedor-info h-100">
+            <!-- bloque deportes -->
             <div class="info-deportes text-center rounded">
               <div class="titulo-deportes text-center h-25">DEPORTES</div>
               <div class="texto-deportes h-75 rounded">
+                <!-- lista deportes -->
                 <ul class="list-group lista-deportes">
                   <li>FÚTBOL SALA</li>
                   <li>BASKET</li>
@@ -32,8 +39,10 @@
               </div>
             </div>
 
+            <!-- bloque instalaciones -->
             <div class="info-instalaciones rounded">
               <div class="titulo-deportes h-25 w-100">INSTALACIONES</div>
+              <!-- información instalaciones -->
               <div class="texto-instalaciones">
                 <span class="text-center"><strong>HORARIO</strong><hr>LUNES A DOMINGO DE 09:00H - 22:00H</span>
                 <span class="text-center"><strong>UBICACIÓN</strong><hr>AVENIDA NAVARRA 141 (ZARAGOZA)</span>
@@ -45,7 +54,7 @@
       </div>
 
 
-
+      <!-- contenedor del footer -->
       <div class="contenedor-footer ">
         <app-footer></app-footer>
       </div>

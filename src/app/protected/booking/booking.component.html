@@ -1,42 +1,54 @@
+<!-- Contenedor general -->
 <div class="container-fluid vh-100 col-12">
+  <!-- Fila de las columnas -->
   <div class="row py-3 h-100">
-    <!-- SIDEBAR -->
+    <!-- columna sidebar -->
     <div class="col-lg-2 col-md-3 col-xs-4" id="sidebar">
       <app-sidebar></app-sidebar>
     </div>
 
+    <!-- columna contenido -->
     <div class="contenido-bookings col-lg-10 col-md-9 col-xs-8">
-
+      <!-- contenedor titulo -->
       <div class="contenedor-titulo" id="titulo">
         <app-header></app-header>
       </div>
 
+      <!-- contenedor cuadro blanco -->
       <div class="contenedor-datos-reservas2 h-50 w-100 rounded ">
+
+        <!-- forrmulario reservas-->
         <form class="form w-100 h-75 form-fecha rounded" autocomplete="off" [formGroup]="formCalendario" (ngSubmit)="checkHours()">
 
-          <!-- CONTENEDOR SELECCION FECHA -->
+          <!-- contenedor de selección de fecha -->
           <div class="contenedor-fecha h-50 w-50">
             <div class="texto-fecha text-center">SELECCIONE UN DÍA</div>
+            <!-- contenedor calendario+boton -->
               <div class="calendario-boton">
                 <input class="calendario" type="date" name="fecha" type="date" formControlName="fecha">
                 <button class="botones-reservas boton-fecha btn-close-white rounded" type="submit" [disabled]="formCalendario.invalid">SELECCIONAR</button>
               </div>
             </div>
 
+            <!-- contenedor de selección de hora y deporte -->
           <div class="contenedor-hora-sport h-50 w-100">
-            <!--  -->
+            <!-- si el array de horas es mayor a 0... -->
             <div *ngIf="hours.length > 0">
+              <!-- formulario de reserva -->
               <form autocomplete="off" [formGroup]="formReserva" (ngSubmit)="reservar()" class="formulario-horas-sport">
-
+                <!-- contenedor de divs horas + deporte -->
                 <div class="contenedor-datos">
+                  <!-- horas -->
                   <div class="horas-deporte">
                     <span class="texto-hora-sport">SELECCIONA UNA HORA</span><hr>
                     <select formControlName="horas">
                       <option *ngFor="let hour of hours" [value]="hour">{{ hour }}</option>
                     </select>
                   </div>
+                  <!-- deporte -->
                   <div class="horas-deporte">
                     <span class="texto-hora-sport">SELECCIONA EL DEPORTE A PRACTICAR</span><hr>
+                    <!-- combo con los deportes -->
                     <select formControlName="sport">
                       <option value="Futbol Sala">Fútbol Sala</option>
                       <option value="Baloncesto">Baloncesto</option>
@@ -48,6 +60,7 @@
                     </select>
                   </div>
                 </div>
+                <!-- contenedor del boton enviar -->
                 <div class="contenedor-boton">
                   <button class="botones-reservas rounded btn-close-white" type="submit" [disabled]="formReserva.invalid">
                       RESERVAR
@@ -59,6 +72,7 @@
         </form>
       </div>
 
+      <!-- contenedor footer -->
       <div class="contenedor-footer">
         <app-footer></app-footer>
       </div>

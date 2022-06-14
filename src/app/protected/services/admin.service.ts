@@ -46,6 +46,7 @@ export class AdminService {
     )
   }
 
+  //  Manda la peticion a la api para que borre el usuario seleccionado
   deleteBooking(id: number){
     const url = `${this.baseURL}/deletebookings/${id}`;
     const headers = new HttpHeaders({'Authorization':"mi-token-secreto"});
@@ -57,6 +58,7 @@ export class AdminService {
     )
   }
 
+  //  manda petición a la api para que busque las reservas que coincidan con la fecha seleccionada
   findBooking(fecha: Date){
     const url = `${this.baseURL}/findbookings`;
     const body = {fecha};

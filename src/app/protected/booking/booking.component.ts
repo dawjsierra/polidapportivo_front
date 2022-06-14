@@ -11,31 +11,37 @@ import { BookingService } from '../services/booking.service';
 })
 export class BookingComponent implements OnInit {
 
+  //  array de horas
   hours: string[] = [];
 
+  //  formularios de fecha y reserva
   formCalendario: FormGroup = new FormGroup({});
   formReserva: FormGroup = new FormGroup({});
 
+  //  inyección de servicios
   constructor(private fb: FormBuilder, private router: Router, private bookingService: BookingService) { }
 
+  // getter para recoger la fecha seleccionada en el formulario
   get fecha(){
     return this.formCalendario.get('fecha')!.value;
   }
 
+  //  inicializamos aquí los formularios
   ngOnInit(): void {
 
+    //  formulario de fecha, es requerido seleccionar una para enviar
     this.formCalendario = this.fb.group({
       fecha: ['', [Validators.required]]
     });
 
+    //  formulario de reserva (horas + sport)
     this.formReserva = this.fb.group({
       horas: ['', [Validators.required]],
       sport: ['', [Validators.required]],
     });
-    // this.formCalendario.get('fecha').value; // Obtencion
-    // this.formCalendario.get('fecha').patchValue(''); //Establecer valor
   }
 
+  //  metodo que nos devuelve un array con las horas disponibles en esa fecha
   checkHours(){
     let fecha:string = this.formCalendario.get('fecha')!.value;
 
@@ -47,6 +53,7 @@ export class BookingComponent implements OnInit {
     });
   }
 
+  //  metodo que manda petición a la api para reservas
   reservar(){
     let fecha:string = this.formCalendario.get('fecha')!.value;
     let hora: string = this.formReserva.get('horas')!.value;
