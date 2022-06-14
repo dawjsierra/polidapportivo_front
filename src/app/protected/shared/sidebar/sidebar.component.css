@@ -1,3 +1,4 @@
+/* estilo de la lista del sidebar */
 ul{
   background-color: black;
   height: 100%;
@@ -5,21 +6,27 @@ ul{
   justify-content: center;
 }
 
+/* hover de los elementos de la lista */
 li:hover{
   cursor: pointer;
   background-color: #284eee;
   color: white;
 }
+
+/* elementos de la lista */
 li{
   background-color: white;
   margin: 15px;
   font-size: 1.1rem;
   font-family: Cocogoose;
 }
+
+/* elemento del logout */
 #logout{
   margin-top: 80%;
 }
 
+/* elementos de la lista en mediaquery mediana */
 @media screen and (min-width: 1000px) and (max-width: 1299px){
   li{
     background-color: white;
@@ -28,6 +35,7 @@ li{
   }
 }
 
+/* elementos de la lista en mediaquery pequeña */
 @media screen and (min-width: 800px) and (max-width: 999px){
   li{
     background-color: white;
